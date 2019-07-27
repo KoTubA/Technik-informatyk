@@ -8,9 +8,9 @@
     <title>Technik informatyk - Baza pytań</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <meta name="theme-color" content="#141519"/>
-    <meta name="msapplication-navbutton-color" content="#141519">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#141519">
+    <meta name="theme-color" content="#040405"/>
+    <meta name="msapplication-navbutton-color" content="#040405">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#040405">
     <link rel="Stylesheet" type="text/css" href="../style.css"/>
     <link rel="Stylesheet" type="text/css" href="../css/fontello.css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -20,22 +20,27 @@
     <![endif]-->
 </head>
     <body>
-        <div id="cnt-portfolio-wrapper">
+        <div id="cnt-wrapper">
             <div id="preloader">
                 <div id="animation-status-top"></div>
                 <div id="animation-status"></div>
             </div>
             <div id="nav-wrapper" class="navbar navbar-expand-lg">
                 <div class="container">
-                    <nav>
-                        <div id="nav-header-portfolio" class="collapse navbar-collapse">
-                            <div class="nav-items active" id="home-nav"><a href="../index.html">Start</a></div>
-                            <div class="nav-items nav-exam" id="e12-nav"><a href="../e12/e12.html">Egzamin E.12</a></div>
-                            <div class="nav-items nav-exam" id="e13-nav"><a href="../e13/e13.html">Egzamin E.13</a></div>
-                            <div class="nav-items nav-exam" id="e14-nav"><a href="../e14/e14.html">Egzamin E.14</a></div>
-                            <div class="nav-items" id="autor-nav"><a href="../autor.html">Autor</a></div>
-                        </div>
-                    </nav>
+                    <div class="row col-12 ml-0 mr-0 pl-0 pr-0 align-items-end row-nav">
+                        <button class="navbar-toggler btn btn-min e13" type="button" data-toggle="collapse" data-target="#nav-header-portfolio" aria-controls="nav-header-portfolio" aria-expanded="false" aria-label="Przełącznik nawigacji">
+                            <i class="icon-menu"></i>
+                        </button>
+                        <nav>
+                            <div id="nav-header-portfolio" class="collapse navbar-collapse">
+                                <div class="nav-items" id="home-nav"><a href="../index.html">Start</a></div>
+                                <div class="nav-items" id="e12-nav"><a href="../e12/e12.html">Egzamin E.12</a></div>
+                                <div class="nav-items" id="e13-nav"><a href="../e13/e13.html">Egzamin E.13</a></div>
+                                <div class="nav-items" id="e14-nav"><a href="../e14/e14.html">Egzamin E.14</a></div>
+                                <div class="nav-items" id="autor-nav"><a href="../autor.html">Autor</a></div>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
             </div>
             
@@ -58,7 +63,7 @@
             <div id="description-footer-copyright">
                 <p>COPY RIGHT 2019 © BY SZYMON RIGHTS RESERVED</p>
             </div>
-            <div id="scrollup">
+            <div id="scrollup" class="e13">
                 <i class="icon-up-open"></i>
             </div>
         </div>
