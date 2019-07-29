@@ -29,8 +29,8 @@
 
 echo <<< END
             <div style="text-align:center; margin-top:10px;">
-                <span class="btn btn-large btn-green" id="prev">Jednak wracam!</span>
-                <span class="btn btn-large btn-green" id="next">Dawaj następne!</span>
+                <span class="btn btn-large btn-green e14" id="prev">Jednak wracam!</span>
+                <span class="btn btn-large btn-green e14" id="next">Dawaj następne!</span>
             </div>
             <script>document.getElementById("next").addEventListener("click", function () { loadquestion($row[id],1)}); document.getElementById("prev").addEventListener("click", function () { loadquestion($row[id],0)});</script>
             <h3 class="onequestion">To jest pytanie, które w bazie E.13 ma numer: $row[id]</h3>

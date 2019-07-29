@@ -1,6 +1,7 @@
 :root {
-    --main: #282a2e;
+    --main: #2f3136;
     --second-main: #191a1e;
+    --third-main: #23242a;
     --e12: #ff4845;
     --e13: #008C4A;
     --e14: #007bff;
@@ -66,16 +67,17 @@ h1 {
     font-size: 18px;
     padding: 20px;
     line-height: 150%;
-    background-color: var(--second-main);
+    background-color: var(--third-main);
     text-align: left;
     margin-bottom: 12px;
+    color: #bcbcbc;
 }
 
 .answer {
     font-size: 18px;
     padding: 15px;
     line-height: 130%;
-    background-color: #451717;
+    background-color: #2c0303;
     text-align: left;
     margin-bottom: 12px;
     color: #FFD9D9;
@@ -88,7 +90,7 @@ h1 {
     line-height: 130%;
     text-align: left;
     margin-bottom: 12px;
-    background-color: var(--second-main);
+    background-color: var(--third-main);
     color: #bcbcbc;
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
@@ -124,6 +126,54 @@ h1 {
     cursor: default;
 }
 
+.rezultat {
+    font-size: 18px;
+    padding: 20px;
+    line-height: 150%;
+    background-color: var(--third-main);
+    text-align: left;
+    margin-bottom: 12px;
+    color: #8E9198;
+}
+
+.rezultatN {
+    font-size: 18px;
+    padding: 20px;
+    line-height: 150%;
+    margin-bottom: 12px;
+    background-color: #820000;
+    text-align: left;
+    color: #fff;
+    opacity: 0.7;
+}
+
+.res {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 30px;
+    color: #D2D3D6;
+}
+
+.mid {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 28px;
+    color: #D2D3D6;
+}
+
+.positive {
+    color: #3deb5a;
+}
+
+.negative {
+    color: #f54444;
+}
+
+.descritpion-end {
+    margin-bottom: 50px !important;
+}
+
 .image {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -145,7 +195,7 @@ h1 {
             align-items: center;
 }
 
-#jednopytanie, #jednopytanie-wrapper {
+#jednopytanie, #jednopytanie-wrapper, #test, #test-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -161,6 +211,54 @@ h1 {
     width: 100%;
 }
 
+.odpchecked {
+    background-color: #4B91D1 !important;
+    border: 2px solid #4B91D1 !important;
+    color: #FFF !important;
+}
+
+#test form, #test-end form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#test .ans {
+    padding: 0px;
+    border: 2px solid var(--third-main);
+    background-color: var(--third-main);
+}
+
+#test button:focus {
+    outline: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+#test .ans:hover {
+    border: 2px solid #4B91D1;
+}
+
+#time {
+    font-size: 20px;
+    color: #D2D3D6;
+    letter-spacing: 0.025em;
+    word-wrap: break-word;
+    margin-bottom: 25px;
+    line-height: 150%;
+    text-align: center;
+}
+
+.ans input {
+    margin-right: 5px !important;
+}
+
+.ans label {
+    padding: 15px;
+    cursor: pointer;
+}
+
 .question-margin {
     margin-bottom: 20px !important;
 }
@@ -173,7 +271,7 @@ h1 {
     color: #D2D3D6;
 }
 
-#jednopytanie-wrapper {
+#jednopytanie-wrapper, #test-wrapper {
     position: relative;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -217,22 +315,61 @@ img {
     vertical-align: middle;
 }
 
-#scrollup {
+#scrollup, #time-sh-side {
 	border-radius: 50%;
     height: 40px;
     width: 40px;
     font-size: 18px;
     color: #FFF;
+    background-color: var(--e14);
     text-align: center;
     position: fixed;
     bottom: 30px;
     right: 30px;
     line-height: 40px;
     cursor: pointer;
-    z-index: 10000;
-    background: var(--e14);
+    z-index: 10001;
     display: none;
     opacity: .6;
+}
+
+#time-sh-side {
+    top: 150px;
+    right: 0px;
+    border-radius: 0%;
+    opacity: 1;
+    position: fixed;
+}
+
+#time-sh {
+    position: relative;
+}
+
+#sh-side-options-hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: var(--second-main);
+    border: 1px solid #8E9198;
+    color: #FFF;
+    padding: 19px;
+    transform: translateX(0%);
+    left: 0px;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: .3s all ease-in-out;
+    z-index: -1;
+    font-size: 13px;
+    white-space: nowrap;
+    word-spacing: 2px;
+    cursor: default;
+}
+
+#time-sh-side:hover #sh-side-options-hover {
+    opacity: 1;
+    transform: translateX(-74px);
 }
 
 .icon-up-open::before {
@@ -296,7 +433,7 @@ img {
     padding-left: 0px;
     display: flex;
     justify-content: space-between;
-    z-index: 10001;
+    z-index: 10002;
     top: 0;
     transition: .3s;
     background-color: var(--second-main);
@@ -304,6 +441,11 @@ img {
 
 .hide {
     top:-63px !important;
+    box-shadow: none !important;
+}
+
+.bhide {
+    top:-76px !important;
     box-shadow: none !important;
 }
 
@@ -433,8 +575,21 @@ nav {
     box-shadow: none !important;
 }
 
-.navbar-toggler.btn.btn-min.e14:hover {
+.finish-test {
+    margin-top: 0px !important;
+    margin-bottom: 35px !important;
+}
+
+.navbar-toggler.btn.btn-min.e14:hover, .finish-test.e14:hover {
     background-color: #0a69ce !important;
+}
+
+.navbar-toggler.btn.btn-min.e13:hover, .finish-test.e13:hover {
+    background-color: #0a7945 !important
+}
+
+.navbar-toggler.btn.btn-min.e12:hover, .finish-test.e12:hover {
+    background-color: #de3836 !important;
 }
 
 .static {
@@ -559,7 +714,6 @@ nav {
 
     #nav-wrapper {
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-        border-bottom: 1px solid #1a1d24;
         padding: 10px 0px 0px 0px;
     }
 
@@ -679,7 +833,7 @@ nav {
 }
 
 .bordered {
-    background: var(--second-main);
+    background: var(--third-main);;
     min-height: 84px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -794,7 +948,7 @@ figure .wrapper {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
     -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
     height: 100%;
-    background: var(--second-main);
+    background: var(--third-main);
 }
 
 figure .wrapper:hover {
@@ -1073,7 +1227,7 @@ input[type=number]
 
 #error {
     font-size: 20px;
-    color: #FFF;
+    color: #f9320c;
     margin: 20px 0px;
 }
 

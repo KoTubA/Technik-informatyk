@@ -1,6 +1,17 @@
 $(document).ready(function () {
     const s = $('#scrollup');
 
+    var h = 'bhide'
+
+    //---------- Media height nav ----------//
+    const media = window.matchMedia("(min-width: 991px)");
+    (media.matches) ? (h = 'bhide',$('.navbar').removeClass('hide')) : (h = 'hide',$('.navbar').removeClass('bhide'));
+
+    media.addListener(function (media) {
+        (media.matches) ? (h = 'bhide',$('.navbar').removeClass('hide')) : (h = 'hide',$('.navbar').removeClass('bhide'));
+    });
+
+
     //---------- Security scroll ----------//
     if ($(window).scrollTop() > 250) {
         s.fadeIn();
@@ -38,7 +49,7 @@ $(document).ready(function () {
         
         $(window).on("scroll", function () {
             if($(window).scrollTop()>100) {
-                $('.navbar').toggleClass('hide', $(window).scrollTop() > zero);
+                $('.navbar').toggleClass(h, $(window).scrollTop() > zero);
                 zero = $(window).scrollTop();
                 var _opened = $(".navbar-collapse").hasClass("show");
                 if (_opened === true) {

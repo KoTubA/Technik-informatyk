@@ -28,7 +28,7 @@ jQuery('.quantity').each(function() {
     spinner.find("input").val(newVal);
     spinner.find("input").trigger("change");
     });
-    console.log(max);
+    
     input.on('keyup', function() {
         if (this.value > parseInt(max)) {
             alert('Wartość wyszukiwanego pytania nie może być większa niż '+max+'!')
