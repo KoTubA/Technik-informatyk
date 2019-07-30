@@ -2,20 +2,22 @@
 
     session_start();
 
-    $conn = @mysqli_connect("localhost", "root", "", "quiz");
-    if (!$conn) {
-        echo '<div id="error">Error: '.mysqli_connect_errno().'</div>';
+    require_once "../connect.php";
+
+    $conn = @new mysqli($host, $db_user, $db_password, $db_name);
+    if ($conn->connect_errno) {
+        echo '<div id="error">Error: '.$conn->connect_errno.'</div>';
     }
     else {
         $conn->set_charset("utf8");
         
         $sql = "SELECT * FROM e12 ORDER BY RAND() LIMIT 40";
-        if($result = @mysqli_query($conn, $sql)) {
-            $resultCheck = mysqli_num_rows($result);
+        if($result = $conn->query($sql)) {
+            $resultCheck = $result->num_rows;
 
             if($resultCheck > 0) {
                 $i = 1;
-                while($row = mysqli_fetch_assoc($result)) {
+                while($row = $result->fetch_assoc()) {
 
 echo <<< END
             <div class="question">
@@ -47,29 +49,28 @@ echo <<< END
                 <input type="hidden" name="pyt$i" value="$row[id]">
 END;
 
-                if(empty($row['src'])!=1) {
-                    echo '<div class="image"><img src="'.$row['src'].'"></div></div>';
+                    if(empty($row['src'])!=1) {
+                        echo '<div class="image"><img src="'.$row['src'].'"></div></div>';
+                    }
+                    else {
+                        echo '</div>';
+                    }
+                    $i++;
                 }
-                else {
-                    echo '</div>';
-                }
-                $i++;
-                }
+
                 echo '<button class="btn btn-large btn-green e12 finish-test" id="prev">Sprawdź odpowiedzi!</button>';
                 $_SESSION['test'] = true;
-                $result->close();
-
-                }
-                else {
-                    echo '<div id="error">Error: Brak wyników zapytania!</div>';
-                }
             }
             else {
-                echo '<div id="error">Error: Błąd zapytania do bazy!</div>';
+                echo '<div id="error">Error: Brak wyników zapytania!</div>';
             }
             
-            $conn->close();
+            $result->free_result();
         }
-
-    exit();
+        else {
+            echo '<div id="error">Error: Błąd zapytania do bazy!</div>';
+        }
+        
+        $conn->close();
+    }
 ?>
