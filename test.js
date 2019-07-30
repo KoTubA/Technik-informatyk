@@ -28,9 +28,9 @@ function loadanswer(idp, odp)
     });
 }
 
-loadquestion(1,null);
+loadquestion(1,0);
 
 $('#search').on('click', function() {
     let v = $('#number').val();
-    loadquestion(v,null);
+    loadquestion(v,0);
 })
