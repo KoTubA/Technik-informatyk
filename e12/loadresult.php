@@ -122,7 +122,6 @@ END;
                             echo '</div>';
                         }
 
-                        $result->close();
                     }
                     else {
                         echo '<div id="error">Error: Brak wyników zapytania!</div>';
