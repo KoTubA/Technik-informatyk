@@ -15,8 +15,8 @@
             exit();
         }
 
-        $idp = htmlspecialchars(trim($_POST['idp']));
-        $odp = htmlspecialchars(trim($_POST['odp']));
+        $idp = mysqli_real_escape_string($conn,trim($_POST['idp']));
+        $odp = mysqli_real_escape_string($conn,trim($_POST['odp']));
 
         $sql = "SELECT * FROM e13 WHERE id=$idp";
         if($result = @$conn->query($sql)) {

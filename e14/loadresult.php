@@ -18,7 +18,7 @@
             {
                 if(!isset($_POST["ansa$x"])) {
                     if(isset($_POST["pyt$x"])) {
-                        $question = htmlspecialchars(trim($_POST["pyt$x"]));
+                        $question = mysqli_real_escape_string($conn,trim($_POST["pyt$x"]));
                         $odp = -1; //Empty answer
                     }
                     else {
@@ -27,7 +27,7 @@
                     }
                 }
                 else {
-                    $fullAnswer = htmlspecialchars(trim($_POST["ansa$x"]));
+                    $fullAnswer = mysqli_real_escape_string($conn,trim($_POST["ansa$x"]));
                     $question = substr($fullAnswer, 1); 
                     $odp = substr($fullAnswer, 0 , 1);
                 }

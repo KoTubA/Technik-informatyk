@@ -15,8 +15,8 @@
             exit();
         }
 
-        $value = htmlspecialchars(trim($_POST['value']));
-        $var = htmlspecialchars(trim($_POST['var']));
+        $value = mysqli_real_escape_string($conn,trim($_POST['value']));
+        $var = mysqli_real_escape_string($conn,trim($_POST['var']));
 
         if($countResult = @$conn->query("SELECT COUNT(*) FROM e13 WHERE 1")) {
             $countCheck = $countResult->num_rows;
