@@ -13,12 +13,21 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#040405">
     <link rel="Stylesheet" type="text/css" href="style.css"/>
     <link rel="Stylesheet" type="text/css" href="css/fontello.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i&display=swap" rel="stylesheet">
     <!--[if lt IE 9]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
         </script>
     <![endif]-->
 </head>
+    <style>
+        #nav-wrapper {
+            background-color: #191a1ed1;
+        }
+        
+        #description-footer-copyright {
+            position: static;
+        }
+    </style>
     <body>
         <div id="cnt-wrapper">
             <div id="preloader">
@@ -32,71 +41,146 @@
                             <i class="icon-menu"></i>
                         </button>
                         <nav>
-                            <div id="nav-header-portfolio" class="collapse navbar-collapse">
-                                <div class="nav-items" id="home-nav"><a href="index.html">Start</a></div>
-                                <div class="nav-items" id="e12-nav"><a href="e12/e12.html">Egzamin E.12</a></div>
-                                <div class="nav-items" id="e13-nav"><a href="e13/e13.html">Egzamin E.13</a></div>
-                                <div class="nav-items" id="e14-nav"><a href="e14/e14.html">Egzamin E.14</a></div>
-                                <div class="nav-items" id="autor-nav"><a href="autor.html">Autor</a></div>
-                            </div>
+                            <ul id="nav-header-portfolio" class="collapse navbar-collapse">
+                                <li class="nav-items" id="home-nav"><a href="index.html">Start</a></li>
+                                <li class="nav-items" id="e12-nav"><a href="e12/e12.html">Egzamin E.12<i class="icon-down-open-mini"></i></a>
+                                    <ul class="nav-header-subpage">
+                                        <li><a href="e12/e12.html">E12 - Teoria</a></li>
+                                        <li><a href="e12/e12-praktyka.html">E12 - Praktyka</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-items" id="e13-nav"><a href="e13/e13.html">Egzamin E.13<i class="icon-down-open-mini"></i></a>
+                                    <ul class="nav-header-subpage">
+                                        <li><a href="e13/e13.html">E13 - Teoria</a></li>
+                                        <li><a href="e13/e13-praktyka.html">E13 - Praktyka</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-items" id="e14-nav"><a href="e14/e14.html">Egzamin E.14<i class="icon-down-open-mini"></i></a>
+                                    <ul class="nav-header-subpage">
+                                        <li><a href="e14/e14.html">E14 - Teoria</a></li>
+                                        <li><a href="e14/e14-praktyka.html">E14 - Praktyka</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-items" id="autor-nav"><a href="autor.html">Autor</a></li>
+                            </ul>
                         </nav>
                     </div>
                 </div>
             </div>
-            <div class="container container-main">
-                <div class="row col-12 ml-0 mr-0 pl-0 pr-0">
-                    <h1 id="title">Baza wszystkich <span style="color:#007bff;">2171 pytań </span>testowych!</h1>
-                    <p id="descritpion">Baza składa się łącznie aż z 2171 pytań (918 E.12 + 728 E.13 + 525 E.14).</p>
-                    <div id="category-items">
-                        <div class="category-items">
-                            <figure class="col-lg-4 col-md-6 col-12 main-el">
-                                <div class="wrapper">
-                                    <div class="icon-overlay icn-link main-category">
-                                        <a class="overgreen" href="e12/e12.html"><span class="icn-more"></span><img src="img/e12.jpg" alt="E.12"></a>
-                                        <a href="e12/e12.html" class="btn-main e12"><i class="icon-plus"></i></a>
+            <div class="container-wrapper-main">
+                <img src="img/banner.jpg" alt="Banner">
+                <div class="shadow-img-portfolio"></div>
+                <div class="container container-main">
+                    <div class="row col-12 ml-0 mr-0 pl-0 pr-0">
+                        <div id="main-cnt-info">
+                            <div id="main-info">
+                                <p>Egzamin zawodowy Technik informatyk</p>
+                            </div>
+                            <div id="descritpion-main">
+                                <p>Wybierz tryb nauki</p>
+                            </div>
+                            <div id="main-button-nav">
+                                <div class="button-main button-main-teoria">Teoria</div>
+                                <div class="button-main button-main-praktyka">Praktyka</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-wrapper-first">
+                <div class="container container-first">
+                    <div class="row col-12 ml-0 mr-0 pl-0 pr-0">
+                        <h1 class="title-rest">Cześć <span style="color:#007bff;">teoretyczna </span></h1>
+                        <p class="descritpion">Baza składa się łącznie aż z 2171 pytań (918 E.12 + 728 E.13 + 525 E.14).</p>
+                        <div id="category-items">
+                            <div class="category-items">
+                                <figure class="col-lg-4 col-md-6 col-12 main-el">
+                                    <div class="wrapper">
+                                        <div class="icon-overlay icn-link main-category">
+                                            <a class="overgreen" href="e12/e12.html"><span class="icn-more"></span><img src="img/e12.jpg" alt="E.12"></a>
+                                            <a href="e12/e12.html" class="btn-main e12"><i class="icon-plus"></i></a>
+                                        </div>
+                                        <figcaption class="bordered">
+                                            <a href="e12/e12.html">
+                                                <div class="info">
+                                                    <div><h5>Kwalifikacja E.12</h5><p>Montaż i eksploatacja komputerów osobistych oraz urządzeń peryferyjnych</p></div>
+                                                    <h4><i class="icon-database"></i>918 <i class="icon-clock"></i>pon. 17.06.2019</h4>
+                                                </div>
+                                            </a>
+                                        </figcaption> 
                                     </div>
-                                    <figcaption class="bordered">
-                                        <a href="e12/e12.html">
-                                            <div class="info">
-                                                <div><h5>Kwalifikacja E.12</h5><p>Montaż i eksploatacja komputerów osobistych oraz urządzeń peryferyjnych</p></div>
-                                                <h4><i class="icon-database"></i>918 <i class="icon-clock"></i>pon. 17.06.2019</h4>
-                                            </div>
-                                        </a>
-                                    </figcaption> 
-                                </div>
-                            </figure>
-                            <figure class="col-lg-4 col-md-6 col-12 main-el">
-                                <div class="wrapper">
-                                    <div class="icon-overlay icn-link">
-                                        <a class="overgreen" href="e13/e13.html"><span class="icn-more"></span><img src="img/e13.jpg" alt="E.13"></a>
-                                        <a href="e13/e13.html" class="btn-main e13"><i class="icon-plus"></i></a>
+                                </figure>
+                                <figure class="col-lg-4 col-md-6 col-12 main-el">
+                                    <div class="wrapper">
+                                        <div class="icon-overlay icn-link">
+                                            <a class="overgreen" href="e13/e13.html"><span class="icn-more"></span><img src="img/e13.jpg" alt="E.13"></a>
+                                            <a href="e13/e13.html" class="btn-main e13"><i class="icon-plus"></i></a>
+                                        </div>
+                                        <figcaption class="bordered">
+                                            <a href="e13/e13.html">
+                                                <div class="info">
+                                                    <div><h5>Kwalifikacja E.13</h5><p>Projektowanie lokalnych sieci komputerowych oraz administrowanie sieciami</p></div>
+                                                    <h4><i class="icon-database"></i>728 <i class="icon-clock"></i>pon. 17.06.2019</h4>
+                                                </div>
+                                            </a>
+                                        </figcaption>
                                     </div>
-                                    <figcaption class="bordered">
-                                        <a href="e13/e13.html">
-                                            <div class="info">
-                                                <div><h5>Kwalifikacja E.13</h5><p>Projektowanie lokalnych sieci komputerowych oraz administrowanie sieciami</p></div>
-                                                <h4><i class="icon-database"></i>728 <i class="icon-clock"></i>pon. 17.06.2019</h4>
-                                            </div>
-                                        </a>
-                                    </figcaption>
-                                </div>
-                            </figure>
-                            <figure class="col-lg-4 col-md-6 col-12 main-el">
-                                <div class="wrapper">
-                                    <div class="icon-overlay icn-link">
-                                        <a class="overgreen" href="e14/e14.html"><span class="icn-more"></span><img src="img/e14.jpg" alt="E.14"></a>
-                                        <a href="e14/e14.html" class="btn-main e14"><i class="icon-plus"></i></a>
+                                </figure>
+                                <figure class="col-lg-4 col-md-6 col-12 main-el">
+                                    <div class="wrapper">
+                                        <div class="icon-overlay icn-link">
+                                            <a class="overgreen" href="e14/e14.html"><span class="icn-more"></span><img src="img/e14.jpg" alt="E.14"></a>
+                                            <a href="e14/e14.html" class="btn-main e14"><i class="icon-plus"></i></a>
+                                        </div>
+                                        <figcaption class="bordered">
+                                            <a href="e14/e14.html">
+                                                <div class="info">
+                                                    <div><h5>Kwalifikacja E.14</h5><p>Tworzenie aplikacji internetowych i baz danych oraz administrowanie bazami</p></div>
+                                                    <h4><i class="icon-database"></i>525 <i class="icon-clock"></i>pon. 17.06.2019</h4>
+                                                </div>
+                                            </a>
+                                        </figcaption>
                                     </div>
-                                    <figcaption class="bordered">
-                                        <a href="e14/e14.html">
-                                            <div class="info">
-                                                <div><h5>Kwalifikacja E.14</h5><p>Tworzenie aplikacji internetowych i baz danych oraz administrowanie bazami</p></div>
-                                                <h4><i class="icon-database"></i>525 <i class="icon-clock"></i>pon. 17.06.2019</h4>
-                                            </div>
-                                        </a>
-                                    </figcaption>
-                                </div>
-                            </figure>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-wrapper-sec">
+                <div class="container container-sec">
+                    <div class="row col-12 ml-0 mr-0 pl-0 pr-0">
+                        <h1 class="title-rest">Cześć <span style="color:#007bff;">praktyczna </span></h1>
+                        <div id="info-about-practice" class="col-12">
+                            <div class="r-about-exam col-12 col-md-6">
+
+                            </div>
+                            <div class="cnt-about-exam col-12 col-md-6">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-wrapper-thr">
+                <div class="container container-thr">
+                    <div class="row col-12 ml-0 mr-0 pl-0 pr-0">
+                        <h1 class="title-main">Technik <span style="color:#007bff;">informatyk </span></h1>
+                        <p class="descritpion col-lg-8 col-12">Strona przygotwoująca do kwalifikacji zawodowych w zawodzie technik informatyk w oparciu o zmodernizowane podstawy programowe kształcenia.</p>
+                        <div id="info-about-exam" class="col-12">
+                            <div class="cnt-about-exam col-12 col-md-6">
+                                <ul>
+                                    <li class="list-about-exam"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span><p>Z czego składa się egzamin zawodwy?</p></li>
+                                    <div class="cnt-list-about-exam">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
+                                    <li class="list-about-exam"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span><p>Z czego składa się egzamin zawodwy?</p></li>
+                                    <div class="cnt-list-about-exam">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
+                                    <li class="list-about-exam"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span><p>Z czego składa się egzamin zawodwy?</p></li>
+                                    <div class="cnt-list-about-exam">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
+                                </ul>
+                            </div>
+                            <div class="r-about-exam col-12 col-md-6">
+                                <img src="img/egzamin-informatyk.png" alt="Technik informatyk">
+                            </div>
                         </div>
                     </div>
                 </div>

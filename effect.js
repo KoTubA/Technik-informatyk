@@ -1,5 +1,8 @@
 $(document).ready(function () {
-    const s = $('#scrollup');
+    const s = $('#scrollup'),
+        tab = [$('.button-main-teoria'), $('.button-main-praktyka')],
+        t = [$('.container-wrapper-first'),$('.container-wrapper-sec')],
+        list = $('.list-about-exam');
 
     var h = 'bhide'
 
@@ -11,6 +14,27 @@ $(document).ready(function () {
         (media.matches) ? (h = 'bhide',$('.navbar').removeClass('hide')) : (h = 'hide',$('.navbar').removeClass('bhide'));
     });
 
+
+    //---------- Scroll to element ----------//
+    tab.forEach(function (n, i) {
+        n.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: t[i].offset().top
+            }, 1000);
+        });
+    });
+
+    //--------- Info about exam --------//
+    $('.cnt-list-about-exam').hide();
+
+    list.each(function(i,ele) {
+        $(ele).on('click', function () {
+            $(ele).next().stop().slideToggle();
+            $(this).find('.icon-plus-1').toggleClass('hide-ele');
+            $(this).find('.icon-minus').toggleClass('hide-ele');
+        });
+    });
 
     //---------- Security scroll ----------//
     if ($(window).scrollTop() > 250) {
@@ -61,6 +85,15 @@ $(document).ready(function () {
     else {
         $('#nav-wrapper').addClass('static');
     }
+
+    $(window).on("scroll", function () {
+        if ($(this).scrollTop() > 150) {
+            $('.navbar').addClass('menu-bg');
+        } else {
+            $('.navbar').removeClass('menu-bg');
+    }
+
+    })
 });
 
 

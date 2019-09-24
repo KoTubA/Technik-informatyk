@@ -3,5 +3,8 @@
 .icon-clock:before { content: '\e801'; } /* '' */
 .icon-up-open:before { content: '\e802'; } /* '' */
 .icon-plus:before { content: '\e803'; } /* '' */
+.icon-plus-1:before { content: '\e804'; } /* '' */
+.icon-minus:before { content: '\e805'; } /* '' */
+.icon-down-open-mini:before { content: '\e806'; } /* '' */
 .icon-menu:before { content: '\f0c9'; } /* '' */
 .icon-database:before { content: '\f1c0'; } /* '' */
