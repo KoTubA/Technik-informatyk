@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -32,13 +35,28 @@
                             <i class="icon-menu"></i>
                         </button>
                         <nav>
-                            <div id="nav-header-portfolio" class="collapse navbar-collapse">
-                                <div class="nav-items" id="home-nav"><a href="../index.html">Start</a></div>
-                                <div class="nav-items" id="e12-nav"><a href="../e12/e12.html">Egzamin E.12</a></div>
-                                <div class="nav-items" id="e13-nav"><a href="../e13/e13.html">Egzamin E.13</a></div>
-                                <div class="nav-items" id="e14-nav"><a href="../e14/e14.html">Egzamin E.14</a></div>
-                                <div class="nav-items" id="autor-nav"><a href="../autor.html">Autor</a></div>
-                            </div>
+                            <ul id="nav-header-portfolio" class="collapse navbar-collapse">
+                                <li class="nav-items" id="home-nav"><a href="../index.html">Start</a></li>
+                                <li class="nav-items" id="e12-nav"><a href="../e12/e12.html">Egzamin E.12<i class="icon-down-open-mini"></i></a>
+                                    <ul class="nav-header-subpage">
+                                        <li><a href="../e12/e12.html">E12 - Teoria</a></li>
+                                        <li><a href="../e12/e12-praktyka.html">E12 - Praktyka</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-items" id="e13-nav"><a href="../e13/e13.html">Egzamin E.13<i class="icon-down-open-mini"></i></a>
+                                    <ul class="nav-header-subpage">
+                                        <li><a href="../e13/e13.html">E13 - Teoria</a></li>
+                                        <li><a href="../e13/e13-praktyka.html">E13 - Praktyka</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-items" id="e14-nav"><a href="../e14/e14.html">Egzamin E.14<i class="icon-down-open-mini"></i></a>
+                                    <ul class="nav-header-subpage">
+                                        <li><a href="../e14/e14.html">E14 - Teoria</a></li>
+                                        <li><a href="../e14/e14-praktyka.html">E14 - Praktyka</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-items" id="autor-nav"><a href="../autor.html">Autor</a></li>
+                            </ul>
                         </nav>
                     </div>
                 </div>
@@ -49,14 +67,14 @@
                     Jeśli chcesz skorzystać z funkcji testu wróć tutaj za jakiś czas. <a href="../index.html" rel="no-follow">Strona główna.</a></span></div>
                 </div>
             -->
-            <div class="container container-main">
-                <div class="row col-lg-9 col-12">
-                    <div id="test-wrapper">
-                        <h1 id="title">Test 40 pytań <span style="color:#007bff;">E.14</span></h1>
-                        <p id="descritpion" class="descritpion-end">Kwalifikacja E.14 - Tworzenie aplikacji internetowych i baz danych oraz administrowanie bazami</p>
-                        <div id="test-end">
+            <div class="container-wrapper">
+                <div class="container container-main">
+                    <div class="row col-lg-9 col-12">
+                        <div id="test-wrapper">
+                            <h1 class="title-main">Test 40 pytań <span style="color:#007bff;">E.14</span></h1>
+                            <p class="descritpion" class="descritpion-end">Kwalifikacja E.14 - Tworzenie aplikacji internetowych i baz danych oraz administrowanie bazami</p>
+                            <div id="test-end">
 <?php
-    session_start();
     if((isset($_SESSION['test'])) && ($_SESSION['test']==true)) {
         if (file_exists('loadresult.php')) {
             require_once "loadresult.php";
@@ -69,6 +87,7 @@
         echo '<h3 class="mid">Nie wybrano testu do rozwiązania!</h3>';
     }
 ?>
+                            </div>
                         </div>
                     </div>
                 </div>

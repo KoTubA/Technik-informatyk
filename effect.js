@@ -4,7 +4,7 @@ $(document).ready(function () {
         t = [$('.container-wrapper-first'),$('.container-wrapper-sec')],
         list = $('.list-about-exam');
 
-    var h = 'bhide'
+    var h = 'bhide';
 
     //---------- Media height nav ----------//
     const media = window.matchMedia("(min-width: 991px)");

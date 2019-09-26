@@ -1,7 +1,7 @@
 :root {
-    --main: #2f3136;
-    --second-main: #191a1e;
-    --third-main: #23242a;
+    --main: #363636;
+    --second-main: #131414;
+    --third-main: #181818;
     --e12: #ff4845;
     --e13: #008C4A;
     --e14: #007bff;
@@ -22,7 +22,7 @@
 }
 
 body {
-    background-color: var(--main);
+    background-color: #232323;
     color: #8E9198;
     font-size: 14px;
     font-weight: 400;
@@ -99,7 +99,7 @@ h1 {
 }
 
 .ans:hover {
-    background-color: #111114;
+    background-color: #121212;
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -437,6 +437,9 @@ img {
     top: 0;
     transition: .3s;
     background-color: var(--second-main);
+    -webkit-box-shadow: 0 2px 7px 1px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 2px 7px 1px rgba(0,0,0,.3);
+    box-shadow: 0 2px 7px 1px rgba(0,0,0,.3);
 }
 
 .menu-bg {
@@ -462,7 +465,7 @@ img {
 .nav-items {
     text-transform: uppercase;
     font-size: 17px;
-    margin: 0px 5px;
+    margin: 0px 7px;
     position: relative;
 }
 
@@ -490,8 +493,8 @@ nav {
     right: auto;
     padding: 0px;
     z-index: 10;
-    background-color: #35373d;
-    border: 1px solid #26282E;
+    background-color: #2c2c2c;
+    border: 1px solid #141414;
     border-top: 0px !important;
     top: auto;
     opacity: 0;
@@ -505,8 +508,12 @@ nav {
 
 
 .nav-header-subpage li {
-    border-top: 1px solid #26282E;
+    border-bottom: 1px solid #141414;
     transition: all .3s;
+}
+
+.nav-header-subpage li:last-child {
+    border-bottom: 0px;
 }
 
 .nav-header-subpage li:hover a {
@@ -591,6 +598,9 @@ nav {
 .container-main {
     margin-top: 40px;
     margin-bottom: 70px;
+}
+
+.container-main-info {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -599,7 +609,11 @@ nav {
 }
 
 .container-first {
-    padding-top: 40px;
+    padding-top: 60px;
+}
+
+.container-first, .container-thr {
+    padding-bottom: 120px !important;
 }
 
 .shadow-img-portfolio {
@@ -624,13 +638,13 @@ nav {
     position: relative;
 }
 
-.container-wrapper-first, .container-wrapper-thr {
-    background-color: var(--main);
+.container-wrapper-first, .container-wrapper-thr, .container-wrapper {
+    background-color: #232323;
     width: 100%;
 }
 
 .container-wrapper-sec {
-    background-color: #373a41;
+    background-color: #3b3b3b;
     width: 100%;
 }
 
@@ -694,6 +708,11 @@ nav {
     font-weight: 700;
     line-height: 85px;
     text-align: center;
+    margin-bottom: 0px;
+    font-family: 'Lato', sans-serif;
+}
+
+#main-info p:last-child {
     margin-bottom: 10px;
 }
 
@@ -743,7 +762,7 @@ nav {
     font-weight: 400;
     width: 100%;
     text-align: center;
-    position: fixed;
+    position: absolute;
     bottom: 0px;
 }
 
@@ -988,12 +1007,118 @@ nav {
     display: none !important;
 }
 
-#category-items {
+#category-items, #container-exam-practice, #header-exam-practice, .header-choose-year, .cnt-exam-practice-wrapper, .cnt-exam-semestr, .cnt-exam-practice, .exam-practice, .exam-practice-show-exam {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+}
+
+#header-exam-practice {
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+#container-exam-practice, .cnt-exam-practice-wrapper, .cnt-exam-semestr, .cnt-exam-practice, #header-exam-practice {
+    width: 100%;
+    color: #cacaca;
+}
+
+#container-exam-practice {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.cnt-exam-practice-wrapper {
+    background: var(--third-main);
+    border-radius: 5px;
+}
+
+.cnt-exam-semestr {
+    padding: 20px;
+}
+
+.cnt-exam-practice {
+    background: var(--third-main);
+    padding: 0px 20px 20px 20px;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.cnt-exam-practice-hide {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
+.exam-practice-show-exam {
+    margin: 0px !important;
+    min-width: auto !important;
+}
+
+.exam-practice {
+    padding: 20px;
+    width: 100%;
+}
+
+.exam-practice-info {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    display: flex;
+}
+
+.exam-practice span {
+    font-size: 15px;
+    color: #dbd9d9;
+}
+
+.exam-practice:nth-child(odd) {
+    background-color: var(--second-main);
+}
+
+.exam-practice:nth-child(even) {
+    background-color: #252525;
+}
+
+.cnt-exam-choose-semestr {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background: var(--second-main);
+    cursor: pointer;
+    color: #FFF;
+    border: 2px solid #007bff;
+    min-width: 100px;
+    text-align: center;
+    transition: .3s all;
+}
+
+.header-choose-year {
+    padding: 12px 25px;
+    margin-right: 5px;
+    cursor: pointer;
+    color: #FFF;
+    transition: .3s all;
+}
+
+.choose-btn-header {
+    background: var(--third-main) !important;
+}
+
+.header-choose-year:hover {
+    background: var(--third-main) !important;
+}
+
+.choose-btn {
+    background: var(--third-main) !important;
+}
+
+.cnt-exam-choose-semestr:hover {
+    background: var(--third-main) !important;
 }
 
 .category-items, .category-items-1, .category-items-2, .category-items-3 {
@@ -1013,6 +1138,7 @@ nav {
     line-height: 130%;
     font-weight: 400;
     color: #FFF;
+    font-family: 'Lato', sans-serif;
 }
 
 #info-about-exam, #info-about-practice {
@@ -1130,6 +1256,11 @@ figcaption a h5 {
     text-align: center;
     margin-top: -25px;
     margin-bottom: 30px;
+    font-family: 'Lato', sans-serif;
+}
+
+.descritpion-exam {
+    margin-bottom: 50px !important;
 }
 
 .descritpion-sec {
@@ -1185,7 +1316,8 @@ figcaption a h5 {
     padding: 0 10px 0 20px;
     color: #616161;
     border-radius: 0 3px 3px 0;
-    font-weight: 700;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
 }
 
 .list-about-exam {
