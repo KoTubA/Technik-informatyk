@@ -1,7 +1,8 @@
 $(document).ready(function () {
     let nav = $('.header-choose-year'),
         btn = $('.cnt-exam-choose-semestr'),
-        cnt = $('.cnt-exam-practice-wrapper');
+        cnt = $('.cnt-exam-practice-wrapper'),
+        button = $('.exam-practice-show-exam');
 
     nav.each(function(i) {
         $(this).on('click', function(){
@@ -30,4 +31,26 @@ $(document).ready(function () {
         });
     });
 
+    $('.exam-practice-cnt').hide();
+
+    button.each(function() {
+        $(this).on('click', function() {
+            let id = '#'+$(this).parent().parent().parent().attr('id');
+            let element = $(id+' .exam-practice-show-exam');
+            
+            if(!$(this).parent().next().is(':hidden')) {
+                $(this).parent().next().stop().slideUp();
+                $(this).find('.icon-minus').addClass('hide-ele');
+                $(this).find('.icon-plus-1').removeClass('hide-ele');
+            }
+            else {
+                $(element).not(this).find('.icon-minus').addClass('hide-ele');
+                $(element).not(this).find('.icon-plus-1').removeClass('hide-ele');
+                $(this).find('.icon-minus').removeClass('hide-ele');
+                $(this).find('.icon-plus-1').addClass('hide-ele');
+                $(element).not(this).parent().next().stop().slideUp();
+                $(this).parent().next().stop().slideDown();
+            }
+        });
+    });
 });

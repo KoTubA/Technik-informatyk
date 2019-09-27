@@ -80,69 +80,322 @@
                                 <div class="cnt-exam-practice" id="exam-2019-01">
                                     <div class="exam-practice">
                                         <div class="exam-practice-info">
-                                            <span>E.14-01-19.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div>
+                                            <span>E.14-01-19.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
                                         </div>
-                                        <div class="exam-practice-cnt cnt-exam-practice-hide">Przykładowy tekst...</div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="https://arkuszepp.pl/archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="https://arkuszepp.pl/e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+                                                <p>Wykonaj aplikację internetową dla bazy danych filmów. Wykorzystaj pakiet XAMPP jako środowisko bazodanowo-aplikacyjne. Stronę internetową zbuduj przy wykorzystaniu edytora zaznaczającego składnię oraz programu do obróbki grafiki rastrowej i wektorowej.</p>
+                                                <p>Aby wykonać zadanie, zaloguj się na konto Egzamin bez hasła. Na pulpicie znajdziesz archiwum ZIP o nazwie pliki1.zip zabezpieczone hasłem: Baz@FilmY</p>
+                                                <p>Archiwum należy rozpakować.</p>
+                                                <p>Na pulpicie konta Egzamin utwórz folder. Jako nazwy folderu użyj swojego numeru PESEL. Rozpakowane pliki umieść w tym folderze. Po skończonej pracy wyniki zapisz w tym folderze.</p>
+                                                <h5>Operacje na bazie danych</h5>
+                                                <p>Baza danych jest zgodna ze strukturą przedstawioną na obrazie 1. Tabela filmy ma dwa klucze obce łączące ją z tabelami rezyserzy i gatunki.</p>
+                                                <div class="img-wrapper-exam">
+                                                    <a href="https://3.bp.blogspot.com/-ejVO6jIsK4M/XMsvzgDItzI/AAAAAAAADo0/YTaBOx27X_0b-rci7w54IQIMdUgYLP9yACLcBGAs/s1600/z.png" imageanchor="1" style="margin-left: auto; margin-right: auto;" target="_blank"><img border="0" data-original-height="183" data-original-width="778" height="92" src="https://3.bp.blogspot.com/-ejVO6jIsK4M/XMsvzgDItzI/AAAAAAAADo0/YTaBOx27X_0b-rci7w54IQIMdUgYLP9yACLcBGAs/s400/z.png" width="400"><div class="subtitle-img">Obraz 1. Baza danych oraz wartości tabeli gatunki</div></a>
+                                                </div>
+                                                <p>Uruchom usługi MySQL i Apache za pomocą XAMPP Control Panel. Za pomocą narzędzia phpMyAdmin wykonaj podane operacje na bazie danych:</p>
+                                                <ul>
+                                                    <li>Utwórz nową bazę danych o nazwie dane</li>
+                                                    <li>Do bazy zaimportuj tabele z pliku dane.sql z rozpakowanego archiwum</li>
+                                                    <li>Wykonaj zrzut ekranu po imporcie. Zrzut zapisz w folderze z numerem PESEL, w formacie PNG i nazwij import. Nie kadruj zrzutu. Powinien on obejmować cały ekran, z widocznym paskiem zadań. Na zrzucie powinny być widoczne elementy wskazujące na poprawnie wykonany import tabel</li>
+                                                    <li>Zapisz i wykonaj zapytania SQL działające na bazie danych dane. Zapytania zapisz w pliku kwerendy.txt, w folderze z numerem PESEL. Wykonaj zrzuty ekranu przedstawiające wyniki działania kwerend. Zrzuty zapisz w formacie JPG i nadaj im nazwy kw1, kw2, kw3, kw4. Zrzuty powinny obejmować cały ekran monitora z widocznym paskiem zadań.</li>
+                                                    <li>Zapytanie 1: wstawiające do tabeli filmy jeden rekord o danych: film „Suburbicon” z roku 2017, gatunek filmu to komedia, ocena jest równa 5</li>
+                                                    <li>Zapytanie 2: wybierające jedynie pole tytul z tabeli filmy oraz odpowiadające mu pole nazwa z tabeli gatunki dla filmów, dla których pole ocena ma wartość 6. Należy posłużyć się relacją</li>
+                                                    <li>Zapytanie 3: wybierające jedynie pola tytul oraz rok z tabeli filmy tylko dla gatunku dramatów o ocenie równej 5</li>
+                                                    <li>Zapytanie 4: tworzące tabelę o nazwie aktorzy i polach id typu numerycznego, imie typu tekstowego, nazwisko typu tekstowego. Pole id nie może przyjmować wartości NULL</li>
+                                                </ul>
+                                                <h5>Witryna internetowa</h5>
+                                                <div class="img-wrapper-exam">
+                                                    <a href="https://4.bp.blogspot.com/-eD4jdBMVTPk/XMsxlR5he5I/AAAAAAAADpA/XP7zzDpRv9YlQftoNGSL2pScUmKJGSW0ACLcBGAs/s1600/z.png" imageanchor="1" style="margin-left: auto; margin-right: auto;" target="_blank"><img border="0" data-original-height="794" data-original-width="1239" height="256" src="https://4.bp.blogspot.com/-eD4jdBMVTPk/XMsxlR5he5I/AAAAAAAADpA/XP7zzDpRv9YlQftoNGSL2pScUmKJGSW0ACLcBGAs/s400/z.png" width="400"><div class="subtitle-img">Obraz 2. Witryna internetowa. Kursor znalazł się na obszarze formularza.</div></a>
+                                                </div>
+                                                <h5>Przygotowanie grafiki:</h5>
+                                                <div class="img-wrapper-exam">
+                                                    <a href="https://4.bp.blogspot.com/-iK0DV9DeJlA/XMzeklRE1cI/AAAAAAAACWg/ac5UBI-oDxUvcr5kl8-9BnrhPgW2-sb3ACLcBGAs/s1600/kadr.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;" target="_blank"><img border="0" data-original-height="405" data-original-width="596" height="217" src="https://4.bp.blogspot.com/-iK0DV9DeJlA/XMzeklRE1cI/AAAAAAAACWg/ac5UBI-oDxUvcr5kl8-9BnrhPgW2-sb3ACLcBGAs/s320/kadr.jpg" width="320"><div class="subtitle-img">kadr.jpg</div></a>
+                                                </div>
+                                                <ul><li>Grafikę kadr.jpg należy skadrować. Na obrazie widoczne są dwie czarne linie wyznaczające kadr. Zdjęcie powinno być wycięte tak, aby był widoczny tylko obszar pomiędzy liniami (linie nie mają być widoczne).</li></ul>
+                                                <h5>Cechy witryny:</h5>
+                                                <ul>
+                                                    <li>Składa się ze strony o nazwie index.html </li>
+                                                    <li>Zastosowany właściwy standard kodowania polskich znaków</li>
+                                                    <li>Tytuł strony widoczny na karcie przeglądarki: „Filmy”</li>
+                                                    <li>Arkusz stylów w pliku o nazwie styl1.css prawidłowo połączony z kodem strony</li>
+                                                    <li>Podział strony na bloki: boczny panel po lewej stronie oraz trzy panele po prawej stronie – jeden pod drugim, stopka pod wszystkimi panelami. Podział zrealizowany za pomocą znaczników sekcji, zgodnie z obrazem 2</li>
+                                                    <li>Zawartość lewego panelu:</li>
+                                                    <li>Nagłówek trzeciego stopnia o treści „Dostępne gatunki filmu”
+                                                    <li>Lista numerowana (uporządkowana) z elementami o treści: „Sci-Fi”, „animacja”, „dramat”, „horror”, „komedia”
+                                                    <li>Umieszczony w akapicie (paragrafie) odnośnik o treści „Pobierz obraz” prowadzący do obrazu kadr.jpg
+                                                    <li>Umieszczony w akapicie odnośnik o treści „Sprawdź repertuar kin” prowadzący do strony „repertuar-kin.pl”, odnośnik otwiera się w osobnym oknie
+                                                    <li>Zawartość pierwszego prawego panelu: nagłówek pierwszego stopnia o treści „FILMOTEKA”
+                                                    <li>Zawartość drugiego prawego panelu: formularz wysyłający dane metodą POST do pliku dodaj.php z elementami umieszczonymi w osobnych wierszach:
+                                                    <li>Tekst „Tytuł: ” oraz pole edycyjne typu tekstowego
+                                                    <li>Tekst „Gatunek filmu: ” oraz pole edycyjne typu numerycznego
+                                                    <li>Tekst „Rok produkcji: ” oraz pole edycyjne typu numerycznego
+                                                    <li>Tekst „Ocena: ” oraz pole edycyjne typu numerycznego
+                                                    <li>Przycisk o treści CZYŚĆ, po jego wciśnięciu dane z pól edycyjnych są usuwane
+                                                    <li>Przycisk o treści DODAJ, po jego wciśnięciu dane są wysyłane do skryptu PHP
+                                                    <li>Zawartość trzeciego prawego panelu: obraz kadr.jpg z tekstem alternatywnym „zdjęcia filmowe”
+                                                    <li>Zawartość stopki:
+                                                    <li>Akapit o treści „Autor strony: ”, dalej wstawiony numer PESEL zdającego</li>
+                                                </ul>
+                                                <h5>Styl CSS witryny internetowej</h5>
+                                                Plik styl1.css zawiera formatowanie:
+                                                <ul>
+                                                    <li>Domyślne dla całej strony: krój czcionki Helvetica</li>
+                                                    <li>Panelu lewego: kolor tła Navy, biały kolor czcionki, wysokość 700 px, szerokość 25%</li>
+                                                    <li>Pierwszego panelu prawego: kolor tła RoyalBlue, wysokość 100 px, szerokość 75%, wyrównanie tekstu do środka</li>
+                                                    <li>Drugiego panelu prawego: kolor tła SteelBlue, wysokość 300 px, szerokość 75%</li>
+                                                    <li>Trzeciego panelu prawego: kolor tła RoyalBlue, wysokość 300 px, szerokość 75%, wyrównanie tekstu do środka</li>
+                                                    <li>Stopki: kolor tła SteelBlue, wyrównanie tekstu do środka, marginesy wewnętrzne 20 px</li>
+                                                    <li>Nagłówka pierwszego stopnia: odległość między literami wynosi 5 px</li>
+                                                    <li>Formularza: marginesy zewnętrzne 30 px, wysokość linii wynosi 3</li>
+                                                    <li>W momencie najechania kursorem na obszar formularza zmienia on kolor tła na DeepSkyBlue</li>
+                                                </ul>
+                                                <h5>Skrypt połączenia z bazą</h5>
+                                                Wymagania dotyczące skryptów:
+                                                <ul>
+                                                    <li>Napisany w języku PHP, umieszczony w pliku dodaj.php (w pliku znajduje się tylko skrypt)</li>
+                                                    <li>Skrypt łączy się z serwerem bazodanowym na localhost, użytkownik root bez hasła, baza danych o nazwie dane</li>
+                                                    <li>Pobiera dane z formularza ze wszystkich pól edycyjnych</li>
+                                                    <li>Dodaje dane do tabeli filmy za pomocą zmodyfikowanego zapytania 1</li>
+                                                    <li>Wypisuje tekst „Film &lt;tytul&gt; został dodany do bazy”, gdzie &lt;tytul&gt; oznacza tytuł wpisany do formularza - Zamyka połączenie z bazą </li>
+                                                </ul>
+                                                <p>W tabeli 1 podano wybór funkcji PHP do obsługi bazy danych.</p>
+                                                <div class="img-wrapper-exam">
+                                                    <a href="https://4.bp.blogspot.com/-IFBB6PbpJGo/XMs0LfTwXrI/AAAAAAAADpM/5wV8WldCEhUtiV1-Nh3ixEUSYqbarv0HQCLcBGAs/s1600/z.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;" target="_blank"><img border="0" data-original-height="405" data-original-width="914" height="176" src="https://4.bp.blogspot.com/-IFBB6PbpJGo/XMs0LfTwXrI/AAAAAAAADpM/5wV8WldCEhUtiV1-Nh3ixEUSYqbarv0HQCLcBGAs/s400/z.png" width="400"><div class="subtitle-img">Tabela 1. Wybór funkcji języka PHP do obsługi bazy MySQL i MariaDB </div></a>
+                                                </div>
+                                                <p><i>UWAGA: po zakończeniu pracy utwórz plik tekstowy. Zapisz w nim nazwę przeglądarki internetowej, w której weryfikowałeś poprawność działania witryny, zapisz go w folderze z numerem PESEL jako przeglądarka.txt. Nagraj płytę z rezultatami pracy. W folderze z numerem PESEL powinny się znajdować pliki: dodaj.php, import.png, index.html, kadr.jpg, kw1.jpg, kw2.jpg, kw3.jpg, kw4.jpg, kwerendy.txt, przeglądarka.txt, styl1.css, ewentualnie inne przygotowane pliki. Po nagraniu płyty sprawdź poprawność nagrania. Opisz płytę swoim numerem PESEL i pozostaw na stanowisku, zapakowaną w pudełku wraz z arkuszem egzaminacyjnym.</i></p>
+                                                <h5>Czas przeznaczony na wykonanie zadania wynosi 150 minut. </h5>
+                                                <h5>Ocenie będzie podlegać 5 rezultatów:</h5>
+                                                <ul>
+                                                    <li>operacje na bazie danych, </li>
+                                                    <li>wygląd witryny internetowej, </li>
+                                                    <li>działanie witryny internetowej, </li>
+                                                    <li>styl CSS witryny internetowej, </li>
+                                                    <li>skrypt połączenia z bazą.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="exam-practice">
                                         <div class="exam-practice-info">
-                                            <span>E.14-02-19.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div>
+                                            <span>E.14-02-19.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
                                         </div>
-                                        <div class="exam-practice-cnt cnt-exam-practice-hide">Przykładowy tekst...</div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="exam-practice">
                                         <div class="exam-practice-info">
-                                            <span>E.14-03-19.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div>
+                                            <span>E.14-03-19.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
                                         </div>
-                                        <div class="exam-practice-cnt cnt-exam-practice-hide">Przykładowy tekst...</div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="exam-practice">
                                         <div class="exam-practice-info">
-                                            <span>E.14-04-19.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div>
+                                            <span>E.14-04-19.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
                                         </div>
-                                        <div class="exam-practice-cnt cnt-exam-practice-hide">Przykładowy tekst...</div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="exam-practice">
                                         <div class="exam-practice-info">
-                                            <span>E.14-05-19.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div>
+                                            <span>E.14-05-19.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
                                         </div>
-                                        <div class="exam-practice-cnt cnt-exam-practice-hide">Przykładowy tekst...</div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="exam-practice">
                                         <div class="exam-practice-info">
-                                            <span>E.14-06-19.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div>
+                                            <span>E.14-06-19.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
                                         </div>
-                                        <div class="exam-practice-cnt cnt-exam-practice-hide">Przykładowy tekst...</div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="exam-practice">
                                         <div class="exam-practice-info">
-                                            <span>E.14-07-19.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div>
+                                            <span>E.14-07-19.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
                                         </div>
-                                        <div class="exam-practice-cnt cnt-exam-practice-hide">Przykładowy tekst...</div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="exam-practice">
                                         <div class="exam-practice-info">
-                                            <span>E.14-08-19.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div>
+                                            <span>E.14-08-19.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
                                         </div>
-                                        <div class="exam-practice-cnt cnt-exam-practice-hide">Przykładowy tekst...</div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="exam-practice">
                                         <div class="exam-practice-info">
-                                            <span>E.14-09-19.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div>
+                                            <span>E.14-09-19.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
                                         </div>
-                                        <div class="exam-practice-cnt cnt-exam-practice-hide">Przykładowy tekst...</div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="exam-practice">
                                         <div class="exam-practice-info">
-                                            <span>E.14-10-19.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div>
+                                            <span>E.14-10-19.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
                                         </div>
-                                        <div class="exam-practice-cnt cnt-exam-practice-hide">Przykładowy tekst...</div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="exam-practice">
                                         <div class="exam-practice-info">
-                                            <span>E.14-11-19.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div>
+                                            <span>E.14-11-19.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
                                         </div>
-                                        <div class="exam-practice-cnt cnt-exam-practice-hide">Przykładowy tekst...</div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="cnt-exam-practice cnt-exam-practice-hide" id="exam-2019-06">
@@ -155,20 +408,260 @@
                                     <div class="cnt-exam-choose-semestr e14">Wiosna</div>
                                 </div>
                                 <div class="cnt-exam-practice" id="exam-2018-01">
-                                    <div class="exam-practice"><span>E.14-01-18.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-02-18.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-03-18.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-04-18.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-05-18.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-06-18.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-07-18.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-08-18.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-09-18.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-01-18.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-02-18.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-03-18.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-04-18.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-05-18.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-06-18.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-07-18.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-08-18.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-09-18.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="cnt-exam-practice cnt-exam-practice-hide" id="exam-2018-06">
-                                    <div class="exam-practice"><span>E.14-04-18.06</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-05-18.06</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-06-18.06</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-04-18.06</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-05-18.06</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-06-18.06</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="cnt-exam-practice-wrapper cnt-exam-practice-hide" id="exam-2017">
@@ -177,19 +670,239 @@
                                     <div class="cnt-exam-choose-semestr e14">Wiosna</div>
                                 </div>
                                 <div class="cnt-exam-practice" id="exam-2017-01">
-                                    <div class="exam-practice"><span>E.14-01-17.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-02-17.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-03-17.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-04-17.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-01-17.06</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-02-17.06</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-03-17.06</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-04-17.06</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="cnt-exam-practice cnt-exam-practice-hide" id="exam-2017-06">
-                                    <div class="exam-practice"><span>E.14-01-17.06</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-02-17.06</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-03-17.06</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-04-17.06</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-05-17.06</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-06-17.06</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-07-17.06</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-01-17.06</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-02-17.06</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-03-17.06</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-04-17.06</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-05-17.06</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-06-17.06</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-07-17.06</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="cnt-exam-practice-wrapper cnt-exam-practice-hide" id="exam-2016">
@@ -199,21 +912,241 @@
                                     <div class="cnt-exam-choose-semestr e14">Jesień</div>
                                 </div>
                                 <div class="cnt-exam-practice" id="exam-2016-01">
-                                    <div class="exam-practice"><span>E.14-01-16.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-02-16.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-03-16.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-04-16.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-05-16.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-01-16.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-02-16.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-03-16.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-04-16.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-05-16.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="cnt-exam-practice cnt-exam-practice-hide" id="exam-2016-05">
-                                    <div class="exam-practice"><span>E.14-01-16.05</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-02-16.05</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-03-16.05</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-01-16.05</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-02-16.05</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-03-16.05</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="cnt-exam-practice cnt-exam-practice-hide" id="exam-2016-08">
-                                    <div class="exam-practice"><span>E.14-01-16.08</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-02-16.08</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
-                                    <div class="exam-practice"><span>E.14-03-16.08</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-01-16.08</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-02-16.08</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-03-16.08</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="cnt-exam-practice-wrapper cnt-exam-practice-hide" id="exam-2015">
@@ -223,13 +1156,73 @@
                                     <div class="cnt-exam-choose-semestr e14">Jesień</div>
                                 </div>
                                 <div class="cnt-exam-practice" id="exam-2015-01">
-                                    <div class="exam-practice"><span>E.14-01-15.01</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-01-15.01</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="cnt-exam-practice cnt-exam-practice-hide" id="exam-2015-05">
-                                    <div class="exam-practice"><span>E.14-01-15.05</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-01-15.05</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="cnt-exam-practice cnt-exam-practice-hide" id="exam-2015-08">
-                                    <div class="exam-practice"><span>E.14-01-15.08</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-01-15.08</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="cnt-exam-practice-wrapper cnt-exam-practice-hide" id="exam-2014">
@@ -238,10 +1231,50 @@
                                     <div class="cnt-exam-choose-semestr e14">Jesień</div>
                                 </div>
                                 <div class="cnt-exam-practice" id="exam-2014-05">
-                                    <div class="exam-practice"><span>E.14-01-14.05</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-01-14.05</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="cnt-exam-practice cnt-exam-practice-hide" id="exam-2014-08">
-                                    <div class="exam-practice"><span>E.14-01-14.08</span><div class="exam-practice-show-exam btn e14">Zobacz egzamin</div></div>
+                                    <div class="exam-practice">
+                                        <div class="exam-practice-info">
+                                            <span>E.14-01-14.08</span><div class="exam-practice-show-exam btn e14"><span><i class="icon-plus-1"></i><i class="icon-minus hide-ele"></i></span></div>
+                                        </div>
+                                        <div class="exam-practice-cnt">
+                                            <div class="exam-practice-cnt-header">
+                                                <p>ZADANIE EGZAMINACYJNE</p>
+                                                <div class="exam-practice-cnt-header-download ">
+                                                    <div class="download-archives cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="archiwa/2019/zima/E.14-01-19.01/pliki1.zip">Pobierz archiwum</a>
+                                                    </div>
+                                                    <div class="download-solution cnt-exam-choose-semestr-download e14">
+                                                        <a class="download-btn" href="e14/2019/Zima/E.14-01-19.01.rar">Pobierz rozwiązanie</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="exam-practice-cnt-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
