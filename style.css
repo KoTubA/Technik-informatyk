@@ -472,7 +472,6 @@ img {
 .nav-items a {
     padding: 8px 15px 23px 15px;
     display: block;
-    transition: all .3s;
     color: #FFF;
     font-family: 'Roboto', sans-serif;
 }
@@ -1073,6 +1072,16 @@ nav {
 .exam-practice {
     padding: 10px 25px;
     width: 100%;
+    border: 1px solid var(--second-main);
+    justify-content: center;
+}
+
+.info-wrapper-exam {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0px 20px 0px;
 }
 
 .exam-practice-info {
@@ -1088,12 +1097,19 @@ nav {
     color: #dbd9d9;
 }
 
+.exam-practice span, .exam-practice-cnt-text {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
 .exam-practice:nth-child(odd) {
     background-color: var(--second-main);
 }
 
 .exam-practice:nth-child(even) {
-    background-color: #252525;
+    background-color: #202020;
 }
 
 .cnt-exam-choose-semestr, .cnt-exam-choose-semestr-download {
@@ -1106,6 +1122,10 @@ nav {
     min-width: 100px;
     text-align: center;
     transition: .3s all;
+}
+
+.cnt-exam-choose-semestr-download {
+    padding: 0px;
 }
 
 .header-choose-year {
@@ -1129,7 +1149,7 @@ nav {
 }
 
 .cnt-exam-choose-semestr:hover, .cnt-exam-choose-semestr-download:hover {
-    background: var(--third-main) !important;
+    background: transparent !important;
 }
 
 .exam-practice-cnt {
@@ -1172,16 +1192,21 @@ nav {
 }
 
 .exam-practice-cnt-text p {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.3rem
 }
 
 .exam-practice-cnt-text h5 {
     text-align: left;
     margin: 0px !important;
-    padding-top: 15px;
-    padding-bottom: 5px;
+    padding-top: 1rem;
+    padding-bottom: 0.4rem;
     font-size: 1.2rem;
     font-weight: 700;
+    text-transform: lowercase;
+}
+
+.exam-practice-cnt-text h5:first-letter, .subtitle-img:first-letter {
+    text-transform: uppercase;
 }
 
 .img-wrapper-exam {
@@ -1199,23 +1224,40 @@ nav {
     display: flex;
 }
 
+.img-wrapper-exam img {
+    width: auto !important;
+    max-width: 100%;
+}
+
 .subtitle-img {
     display: flex;
     justify-content: center;
     padding-top: 8px;
     font-size: 14px;
+    text-align: center;
 }
 
-.exam-practice-cnt-text img {
-    width: auto !important;
+.img-wrapper-exam a {
+    max-width: 75%;
+    width: auto;
 }
 
 .exam-practice-cnt-text ul {
     padding-inline-start: 20px !important;
 }
 
+.exam-practice-cnt-text ul li {
+    margin-bottom: 3px;
+}
+
+.exam-practice-cnt-text ul ~ p:nth-last-of-type(1) {
+    margin: 0px;
+}
+
 .download-btn {
     color: #FFF !important;
+    padding: 10px 20px;
+    display: block;
 }
 
 .category-items, .category-items-1, .category-items-2, .category-items-3 {
