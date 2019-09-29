@@ -1,6 +1,7 @@
 let ele = document.querySelectorAll('.question'),
     tab = [],
-    string = '';
+    string = '',
+    j = 526; //Od jakiego pytania pobieramy
 
     ele.forEach(function(el,i){
         let nodes = el.querySelectorAll(".answer");
@@ -36,19 +37,21 @@ let ele = document.querySelectorAll('.question'),
         tab[i].push(odp);
 
         if(el.querySelector("img")) {
-            let source = el.querySelector("img").src;
-            let elsrc = source.indexOf("/egzamin/e14/")+13; //Nazyw plików
-            source = source.substr(elsrc);
+            let source = el.querySelector("img").getAttribute('src');
             tab[i].push(source+'\n');
         }
         else {
             tab[i].push('\n');
         }
 
-        string += tab[i].join('\n');
+        if(i>=j-1) {
+            string += tab[i].join('\n');
+        };
     });
 
 let a = document.createElement("a");
 a.href = 'data:application/csv;charset=utf-8,' + encodeURIComponent(string);
 a.download = "Baza.txt";
 a.click();
+
+//Pamiętaj o zamianie "<" oraz ">"

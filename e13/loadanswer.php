@@ -84,7 +84,7 @@ echo <<< END
                 <span class="btn btn-large btn-green e13" id="prev">Jednak wracam!</span>
                 <span class="btn btn-large btn-green e13" id="next">Dawaj następne!</span>
             </div>
-            <script>document.getElementById("next").addEventListener("click", function () { loadquestion($row[id],1)}); document.getElementById("prev").addEventListener("click", function () { loadquestion($row[id],0)});</script>
+            <script>document.getElementById("next").addEventListener("click", function () { loadquestion($row[id],1)}); document.getElementById("prev").addEventListener("click", function () { loadquestion($row[id],-1)});</script>
             <h3 class="onequestion">$str</h3>
             <div class="question question-margin">
                 <div class="title">$row[pytanie]</div>
