@@ -733,12 +733,27 @@ nav {
     background-color: var(--e12) !important;
 }
 
+.e12-btn {
+    background-color: var(--e12) !important;
+    border-color: var(--e12) !important;
+}
+
 .e13 {
     background-color: var(--e13) !important;
 }
 
+.e13-btn {
+    background-color: var(--e13) !important;
+    border-color: var(--e13) !important;
+}
+
 .e14 {
     background-color: var(--e14) !important;
+}
+
+.e14-btn {
+    background-color: var(--e14) !important;
+    border-color: var(--e14) !important;
 }
 
 
@@ -1145,7 +1160,7 @@ nav {
 }
 
 .choose-btn {
-    background: var(--third-main) !important;
+    background: transparent !important;
 }
 
 .cnt-exam-choose-semestr:hover, .cnt-exam-choose-semestr-download:hover {
@@ -1443,6 +1458,10 @@ figcaption a h5 {
     justify-content: center;
     align-items: center;
     border-radius: 3px 0 0 3px;
+}
+
+.exam-practice-show-exam span {
+    background-color: initial !important;
 }
 
 .cnt-about-exam ul li p {

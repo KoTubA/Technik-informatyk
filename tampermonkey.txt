@@ -1,0 +1,213 @@
+// --------------------------- Scirpt 1 --------------------------- //
+
+// ==UserScript==
+// @name         Cement
+// @namespace    Pytania teoretyczne
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+    // Your code here...
+let string = '',
+    value = 0,
+    start = 838, //od jakiego pytania pobierać
+    quantity = 81, //ile pytań ma pobrać
+    repeat = [],
+    fun = setInterval(function(){
+        if(document.querySelector("#jednopytanie > h3")==null) {
+            loadquestion();
+            console.log('AGAIN');
+            return;
+        }
+        var l= document.querySelector("#jednopytanie > h3").innerText;
+        var d= l.indexOf(":")+2;
+        l = l.substr(d);
+        var number = parseInt(l);
+        var found  = repeat.some( function(v) {
+            return v.indexOf(l) !== -1 ;
+        });
+        if(found) {loadquestion(); return};
+        if(number<start || isNaN(number)) {loadquestion(); return}
+        else {
+            loadanswer(l,5);
+            if(window.setTimeout(function(){pytanie(l)},300)) { //This is a confirmed bug in Chrome (using window.setTimeout instead of setTimeout)
+            repeat.push(l)};
+        }
+        console.log('Question: '+l); //jakie pytanie
+        console.log(repeat); //jakie ele są w tablicy
+
+
+    function pytanie(l){
+        if(document.querySelector(".odpgood")!=null){
+        var tab = [];
+                          tab.push(document.querySelector("#jednopytanie > div.tresc"),
+                                   document.querySelector("#jednopytanie > div.tresc").nextSibling,
+                                   document.querySelector("#jednopytanie > div.tresc").nextSibling.nextSibling,
+                                   document.querySelector("#jednopytanie > div.tresc").nextSibling.nextSibling.nextSibling,
+                                   document.querySelector("#jednopytanie > div.tresc").nextSibling.nextSibling.nextSibling.nextSibling,
+                                   document.querySelector("#jednopytanie > div.obrazek"));
+
+        var clone = [tab[1],tab[2],tab[3],tab[4]];
+        var odp = [];
+        for(let i=0;i<clone.length;i++){
+            if(clone[i].className=="odpgood") {
+                odp.push('correct');}
+            else {
+                odp.push('');
+            }
+        }
+
+string += '<div class="question" id="'+l+'">\n \
+\t<div class="title">'+l+'. '+tab[0].innerText+'</div>\n';
+if(tab[tab.length-1]!=null) {
+        var ele = document.querySelector("#jednopytanie > div.obrazek > img");
+                             var source = ele.src;
+                             var elsrc= source.indexOf(".pl/")+8;
+                             source = source.substr(elsrc);
+
+        var link = document.createElement("a");
+        link.id='obrazek';
+        link.download = source;
+        link.href = ele.src;
+        link.click();
+
+string += '\t<div class="image">\n \
+\t\t<img src="'+source+'">\n \
+\t</div>\n';
+                            }
+string += '\t<div class="answer '+odp[0]+'">\n \
+\t\t<strong>A. </strong>'+tab[1].innerText.slice(3)+'\n \
+\t</div>\n \
+\t<div class="answer '+odp[1]+'">\n \
+\t\t<strong>B. </strong>'+tab[2].innerText.slice(3)+'\n \
+\t</div>\n \
+\t<div class="answer '+odp[2]+'">\n \
+\t\t<strong>C. </strong>'+tab[3].innerText.slice(3)+'\n \
+\t</div>\n \
+\t<div class="answer '+odp[3]+'">\n \
+\t\t<strong>D. </strong>'+tab[4].innerText.slice(3)+'\n \
+\t</div>\n</div>\n';
+
+        value++;
+            console.log(value);
+        if(value>=quantity) {
+
+            var a = document.createElement("a");
+            a.href = 'data:application/csv;charset=utf-8,' + encodeURIComponent(string);
+            a.download = "Pytania.txt";
+            a.click();
+            console.log(string); //Security
+            clearInterval(fun);
+
+        }
+        else {
+        loadquestion();
+        }
+        }
+        else {
+            console.log('RE-CHECKING ANSW');
+            setTimeout(function(){pytanie(l);},100);
+        }
+    };
+
+}, 700);
+
+})();
+
+
+// --------------------------- Scirpt 2 --------------------------- //
+
+// ==UserScript==
+// @name         Praktyka
+// @namespace    Arkusze praktyczne
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        https://arkuszepp.pl/*
+// @grant        none
+// @require http://code.jquery.com/jquery-2.1.0.min.js
+// @run-at  document-end
+// ==/UserScript==
+
+(function() {
+    $(document).ready(function(){
+        let string = '',
+            v = $('#roz .button').attr('href'),
+            x = $('#dow .button').attr('href');
+        v = "https://arkuszepp.pl/"+v;
+        x = "https://arkuszepp.pl/"+x;
+
+        string = '\
+        <div class="exam-practice-cnt-header">\n \
+        \t<p>ZADANIE EGZAMINACYJNE</p>\n \
+        \t<div class="exam-practice-cnt-header-download">\n \
+        \t\t<div class="download-archives cnt-exam-choose-semestr-download e14">\n \
+        \t\t\t<a class="download-btn" href="'+x+'">Pobierz archiwum</a>\n \
+        \t\t</div>\n \
+        \t\t<div class="download-solution cnt-exam-choose-semestr-download e14">\n \
+        \t\t\t<a class="download-btn" href="'+v+'">Pobierz rozwiązanie</a>\n \
+        \t\t</div>\n \
+        \t</div>\n \
+        </div>\n \
+        <div class="exam-practice-cnt-text">';
+
+
+        $('*').contents().each(function() {
+            if(this.nodeType === Node.COMMENT_NODE) {
+                $(this).remove();
+            }
+        });
+
+        //Usunięcie niepotrzebnych elementów
+        $("#arkusz h2").replaceWith(function() { return; });
+        $("#arkusz > ul br").replaceWith(function() { return; });
+        $("#arkusz > .advert").replaceWith(function() { return; });
+
+        $("#arkusz > ul.actions").replaceWith(function() { return; });
+        $("#arkusz > div:nth-child(4), #arkusz > br:nth-child(1), #arkusz > br:nth-child(2), #arkusz > br:nth-child(3),#arkusz > h4").replaceWith(function() { return; });
+
+        $("#arkusz > h5").replaceWith(function() { return '<br><h5>'+this.innerHTML+'</h5><br>'; });
+        $("#arkusz > ul").replaceWith(function() { return '<br><ul>'+this.innerHTML+'</ul><br>'; });
+
+
+        //Zamiana poszczególnych elementów na takie jakie my potrzebujemy
+        $("#arkusz strong").replaceWith(function() { return '<b>'+this.innerHTML+'</b>'; });
+        $("#arkusz img").replaceWith(function() {
+            let title = $(this).next().html();
+            let string_img = '<br><div class="img-wrapper-exam">\n \
+                                   \t<a href="'+this.currentSrc+'" style="margin-left: auto; margin-right: auto;" target="_blank"><img src="'+this.currentSrc+'"><div class="subtitle-img">'+title+'</div></a>\n \
+                              </div><br>';
+            return string_img
+        });
+
+        $("#arkusz > h6").replaceWith(function() { return; });
+        let ele = $("#arkusz").html().split("<br>");
+
+        for (let i = 0; i < ele.length; i++) {
+            ele[i] = $.trim(ele[i].replace(/\s+/g, ' '));
+            if(ele[i]!="" && ele[i].search("<h5>") && ele[i].search("<ul>")==-1 && ele[i].search("</a>")==-1) {
+                ele[i] = "<p>"+ele[i]+"</p>";
+            }
+            string += "\n\t\t\t"+ele[i];
+        }
+
+        string += '\n\t\t\t<div class="info-wrapper-exam">\n \
+               \t\tPODANE ROZWIĄZANIE JEST TYLKO PRZYKŁADEM.\n \
+\t\t\t</div>\n \
+\t\t</div>';
+
+        console.log(string);
+
+        var a = document.createElement("a");
+            a.href = 'data:application/csv;charset=utf-8,' + encodeURIComponent(string);
+            a.download = "Egzamin praktyczny.txt";
+            a.click();
+            console.log(string); //Security
+
+    });
+})(jQuery);
