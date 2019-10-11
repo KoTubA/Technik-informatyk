@@ -8,12 +8,42 @@ $(document).ready(function () {
 
     //---------- Media height nav ----------//
     const media = window.matchMedia("(min-width: 991px)");
-    (media.matches) ? (h = 'bhide',$('.navbar').removeClass('hide')) : (h = 'hide',$('.navbar').removeClass('bhide'));
+    (media.matches) ? (h = 'bhide',$('.navbar').removeClass('hide')) : (h = 'hide',$('.navbar').removeClass('bhide'),$('#e12-nav, #e13-nav, #e14-nav').addClass('small-nav'),$('.nav-items a').addClass('nav-items-disable'));
 
     media.addListener(function (media) {
-        (media.matches) ? (h = 'bhide',$('.navbar').removeClass('hide')) : (h = 'hide',$('.navbar').removeClass('bhide'));
+        (media.matches) ? (h = 'bhide',$('.navbar').removeClass('hide'),$('#e12-nav, #e13-nav, #e14-nav').removeClass('small-nav'),$('.nav-items a').removeClass('nav-items-disable'),check()) : (h = 'hide',$('.navbar').removeClass('bhide'),$('#e12-nav, #e13-nav, #e14-nav').addClass('small-nav'),$('.nav-items a').addClass('nav-items-disable'),check());
     });
 
+    //---------- Nav disable element ----------//
+    function check() {
+        if($('.small-nav').length) {
+            $('.small-nav .nav-header-subpage').hide();
+
+            $('.small-nav').on('click', function(e) {
+                e.preventDefault();
+                if(!$(this).find('.nav-header-subpage').is(':hidden')) {
+                    $(this).find('.nav-header-subpage').stop().slideUp();
+                    $(this).find('.icon-down-open-mini').stop().removeClass('flip');
+                    $(this).children().removeClass('active-nav');
+                }
+                else {
+                    $('.small-nav').find('.nav-header-subpage').not(this).stop().slideUp();
+                    $('.small-nav').find('.icon-down-open-mini').not(this).removeClass('flip');
+                    $('.small-nav').children().not(this).removeClass('active-nav');
+                    $(this).find('.nav-header-subpage').stop().slideDown();
+                    $(this).find('.icon-down-open-mini').stop().addClass('flip');
+                    $(this).children().addClass('active-nav');
+                }
+            });
+        }
+        else {
+            $('#e12-nav, #e13-nav, #e14-nav').unbind();
+            $('#e12-nav, #e13-nav, #e14-nav').children().removeClass('active-nav');
+            $('#e12-nav, #e13-nav, #e14-nav').find('.icon-down-open-mini').removeClass('flip');
+            $('#nav-header-exam').removeClass('show');
+        }
+    };
+    check();
 
     //---------- Scroll to element ----------//
     tab.forEach(function (n, i) {
@@ -30,9 +60,19 @@ $(document).ready(function () {
 
     list.each(function(i,ele) {
         $(ele).on('click', function () {
-            $(ele).next().stop().slideToggle();
-            $(this).find('.icon-plus-1').toggleClass('hide-ele');
-            $(this).find('.icon-minus').toggleClass('hide-ele');
+            if(!$(this).next().is(':hidden')) {
+                $('.cnt-list-about-exam').stop().slideUp();
+                $(this).find('.icon-plus-1').removeClass('hide-ele');
+                $(this).find('.icon-minus').addClass('hide-ele');
+            }
+            else {
+                $('.cnt-list-about-exam').not(this).stop().slideUp();
+                $('.list-about-exam .icon-minus').addClass('hide-ele');
+                $('.list-about-exam .icon-plus-1').removeClass('hide-ele');
+                $(this).next().stop().slideDown();
+                $(this).find('.icon-plus-1').toggleClass('hide-ele');
+                $(this).find('.icon-minus').toggleClass('hide-ele');
+            }
         });
     });
 
@@ -59,7 +99,7 @@ $(document).ready(function () {
     $(document).click(function (event) {
         var clickover = $(event.target);
         var _opened = $(".navbar-collapse").hasClass("show");
-        if (_opened === true && !clickover.hasClass("navbar-toggler") && !clickover.hasClass("navbar") && !clickover.hasClass("row-nav")) {
+        if (_opened === true && !clickover.hasClass("navbar-toggler") && !clickover.hasClass("navbar") && !clickover.hasClass("row-nav") && !clickover.hasClass("nav-items") && !clickover.hasClass("nav-items-disable") && !clickover.hasClass("icon-down-open-mini-toogle")) {
             $("button.navbar-toggler").click();
         }
     });
