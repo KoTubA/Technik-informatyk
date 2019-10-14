@@ -1,0 +1,374 @@
+@media (min-width: 991px) {
+    .nav-header-subpage {
+        display: block !important;
+    }
+}
+
+@media (max-width: 991px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    #title, #title-question {
+       font-size: 38px !important; 
+    }
+
+    .container-main, .container {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-top: 25px;
+    }
+
+    #descritpion {
+        margin-bottom: 15px !important;
+    }
+    
+    #title-question {
+        margin-top: 32px !important;
+    }
+
+    nav, #nav-header, .nav-items a {
+        width: 100% !important;
+    }
+
+    nav {
+        margin-right: 0px;
+        margin-top: 10px;
+    }
+
+    #nav-header-exam {
+        overflow: hidden;
+    }
+
+    #nav-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .nav-items a {
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid silver;
+        padding: 15px 0px !important;
+        margin: 0px;
+    }
+
+    #row-nav {
+        padding-right: 10px !important;
+        justify-content: center;
+    }
+
+    #nav-wrapper {
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        padding: 10px 0px 0px 0px;
+    }
+
+    #nav-wrapper .container {
+        margin-top: 0px;
+    }
+
+    .nav-items:hover::after {
+        height: 0px !important;;
+    }
+
+    .nav-header-subpage {
+        width: 100%;
+        position: relative;
+        background-color: transparent;
+        border: 0px;
+        box-shadow: none;
+        visibility: visible;
+        opacity: 1;
+        transition: none;
+    }
+
+    .nav-items a, .nav-header-subpage li {
+        border-bottom: 0px;
+    }
+
+    .nav-items .icon-down-open-mini::before {
+        margin-right: 10px !important;
+    }
+
+    .nav-items {
+        border-bottom: 1px solid silver;
+        margin: 0px !important;
+    }
+
+    .nav-items:last-child {
+        border-bottom: none;
+    }
+    
+    .cnt-about-practice {
+        padding-top: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #info-about-practice {
+        justify-content: center;
+    }
+
+    .r-about-exam {
+        display: block !important;
+        padding-left: 20px !important;
+        padding-right: 0px !important;
+    }
+
+    .r-about-exam img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .cnt-about-exam {
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+
+    .cnt-about-exam ul {
+        padding-inline-start: 0px !important;
+    }
+
+    .exam-practice-cnt-header p {
+        font-size: 18px !important;
+        margin-bottom: 4px !important;
+    }
+
+    .btn-large.btn-large-test {
+        min-width: 60px !important;
+        max-width: 60px !important;
+        height: 60px !important;
+        padding: 0px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    #descritpion, #descritpion-autor {
+        font-size: 16px !important;
+    }
+
+    #title, #title-autor, #title-question {
+        line-height: 110% !important;
+    }
+
+    #descritpion {
+        margin-top: -20px !important;
+    }
+
+    html {
+        font-size: 0.8rem !important;
+    }
+
+    .cnt-about-exam {
+        padding-top: 0px !important;
+    }
+
+    .r-about-exam {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .header-choose-year {
+        padding: 12px 20px !important;
+    }
+
+    .exam-practice-cnt-header {
+        flex-direction: column !important;
+        align-items: baseline !important;
+    }
+}
+
+@media (max-width: 675px) {
+    #scrollup {
+        right: 10px;
+    }
+
+    html {
+        font-size: 0.7rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+
+    html {
+        font-size: 0.6rem !important;
+    }
+
+    .row {
+        padding-right: 25px !important;
+        padding-left: 25px !important;
+    }
+
+    #title, #title-question {
+       font-size: 36px !important; 
+    }
+
+    #row-nav {
+        padding-right: 35px !important;
+    }
+
+    #description-footer-copyright {
+        font-size: 12px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .header-choose-year {
+        padding: 12px 18px !important;
+    }
+
+    #header-exam-practice {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .img-wrapper-exam a {
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 533px) {
+    #header-exam-practice-cnt, .cnt-exam-semestr {
+        overflow: scroll;
+        flex-wrap: nowrap;
+    }
+
+    .cnt-exam-practice {
+        padding: 0px !important;
+    }
+
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 0.6rem !important;
+    }
+
+    .row {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+
+    #row-nav {
+        padding-right: 25px !important;
+    }
+
+    .container {
+        padding-top: 30px;
+    }
+
+    .cnt-about-practice ul li {
+        flex-direction: column;
+    }
+
+    .cnt-about-practice .number-list-practice {
+        padding: 0px 0px 15px 0px !important;
+    }
+
+    .cnt-about-practice .list-about-practice h3 {
+        font-size: 19px !important;
+    }
+}
+
+@media (max-width: 430px) {
+    .cnt-exam-choose-semestr-download {
+        width: 100% !important;
+    }
+
+    .cnt-exam-choose-semestr-download:first-child {
+        margin-bottom: 15px;
+    }
+
+    .exam-practice-cnt-header-download {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .exam-practice-cnt-header p {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px !important;
+    }
+}
+
+@media (max-width: 420px) {
+    html {
+        font-size: 0.5rem !important;
+    }
+
+    .cnt-about-practice ul li {
+        padding: 20px !important;
+    }
+
+    .title-main, #title-autor, #title-question, .title-rest, .title-header {
+        font-size: 36px !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .bordered .info {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
+
+    .main-el {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .row {
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+
+    #row-nav {
+        padding-right: 15px !important;
+    }
+
+    html {
+        font-size: 0.45rem !important;
+    }
+
+    .cnt-about-practice {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .title-main, #title-autor, #title-question, .title-rest, .title-header {
+        font-size: 32px !important;
+    }
+}
+
+@media (max-width: 330px) {
+    #main-button-nav {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .button-main-teoria {
+        margin-left: 15px;
+        margin-right: 0px;
+    }
+
+    .button-main-praktyka {
+        margin-right: 15px;
+        margin-left: 0px;
+    }
+
+    .cnt-about-exam ul li p{
+        font-size: 14px !important;
+    }
+}
+
+@media (max-height: 900px) {
+    #main-cnt-info {
+        margin-top: 0px !important;
+    }
+}

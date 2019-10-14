@@ -56,7 +56,7 @@ END;
                     $i++;
                 }
 
-                echo '<button class="btn btn-large btn-green e14 finish-test" id="prev">Sprawdź odpowiedzi!</button>';
+                echo '<button class="btn btn-large btn-green e14 finish-test">Sprawdź odpowiedzi!</button>';
                 $_SESSION['test'] = true;
             }
             else {

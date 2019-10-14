@@ -15,8 +15,12 @@
     <meta name="msapplication-navbutton-color" content="#040405">
     <meta name="apple-mobile-web-app-status-bar-style" content="#040405">
     <link rel="Stylesheet" type="text/css" href="../style.css"/>
+    <link rel="Stylesheet" type="text/css" href="../media.css"/>
+    <link rel="Stylesheet" type="text/css" href="../animate.css"/>
     <link rel="Stylesheet" type="text/css" href="../css/fontello.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
     <!--[if lt IE 9]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
         </script>
@@ -30,26 +34,26 @@
             </div>
             <div id="nav-wrapper" class="navbar navbar-expand-lg">
                 <div class="container">
-                    <div class="row col-12 ml-0 mr-0 pl-0 pr-0 align-items-end row-nav">
-                        <button class="navbar-toggler btn btn-min e13" type="button" data-toggle="collapse" data-target="#nav-header-portfolio" aria-controls="nav-header-portfolio" aria-expanded="false" aria-label="Przełącznik nawigacji">
+                    <div id="row-nav" class="row col-12 ml-0 mr-0 pl-0 pr-0 align-items-end">
+                        <button class="navbar-toggler btn btn-min e13" type="button" data-toggle="collapse" data-target="#nav-header-exam" aria-controls="nav-header-exam" aria-expanded="false" aria-label="Przełącznik nawigacji">
                             <i class="icon-menu"></i>
                         </button>
                         <nav>
-                            <ul id="nav-header-portfolio" class="collapse navbar-collapse">
+                            <ul id="nav-header-exam" class="collapse navbar-collapse">
                                 <li class="nav-items" id="home-nav"><a href="../index.html">Start</a></li>
-                                <li class="nav-items" id="e12-nav"><a href="../e12/e12.html">Egzamin E.12<i class="icon-down-open-mini"></i></a>
+                                <li class="nav-items" id="e12-nav"><a href="../e12/e12.html">Egzamin E.12<i class="icon-down-open-mini icon-down-open-mini-toogle"></i></a>
                                     <ul class="nav-header-subpage">
                                         <li><a href="../e12/e12.html">E12 - Teoria</a></li>
                                         <li><a href="../e12/e12-praktyka.html">E12 - Praktyka</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-items" id="e13-nav"><a href="../e13/e13.html">Egzamin E.13<i class="icon-down-open-mini"></i></a>
+                                <li class="nav-items" id="e13-nav"><a href="../e13/e13.html">Egzamin E.13<i class="icon-down-open-mini icon-down-open-mini-toogle"></i></a>
                                     <ul class="nav-header-subpage">
                                         <li><a href="../e13/e13.html">E13 - Teoria</a></li>
                                         <li><a href="../e13/e13-praktyka.html">E13 - Praktyka</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-items" id="e14-nav"><a href="../e14/e14.html">Egzamin E.14<i class="icon-down-open-mini"></i></a>
+                                <li class="nav-items" id="e14-nav"><a href="../e14/e14.html">Egzamin E.14<i class="icon-down-open-mini icon-down-open-mini-toogle"></i></a>
                                     <ul class="nav-header-subpage">
                                         <li><a href="../e14/e14.html">E14 - Teoria</a></li>
                                         <li><a href="../e14/e14-praktyka.html">E14 - Praktyka</a></li>
@@ -61,12 +65,6 @@
                     </div>
                 </div>
             </div>
-            <!--
-                <div id="overlay">
-                    <div id="expansion">Strona nie jest w pełni funkcjonalna! <span>
-                    Jeśli chcesz skorzystać z funkcji testu wróć tutaj za jakiś czas. <a href="../index.html" rel="no-follow">Strona główna.</a></span></div>
-                </div>
-            -->
             <div class="container-wrapper">
                 <div class="container container-main">
                     <div class="row col-lg-9 col-12">
@@ -110,8 +108,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../effect.js"></script>
-    <script src="../number.js"></script>
+    <script src="../js/effect.js"></script>
+    <script src="../js/number.js"></script>
     <script>
         $(document).ready(function(){
             let clone = $('.res').clone();
