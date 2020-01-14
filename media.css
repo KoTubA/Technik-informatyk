@@ -41,16 +41,29 @@
     }
 
     #nav-header {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         margin-top: 10px;
     }
 
     .nav-items a {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         border-bottom: 1px solid silver;
         padding: 15px 0px !important;
         margin: 0px;
@@ -58,11 +71,14 @@
 
     #row-nav {
         padding-right: 10px !important;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 
     #nav-wrapper {
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+                box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
         padding: 10px 0px 0px 0px;
     }
 
@@ -70,8 +86,9 @@
         margin-top: 0px;
     }
 
-    .nav-items:hover::after {
-        height: 0px !important;;
+    .nav-items:hover::after, .nav-items::after {
+        height: 0px !important;
+        width: 0 !important;
     }
 
     .nav-header-subpage {
@@ -79,9 +96,12 @@
         position: relative;
         background-color: transparent;
         border: 0px;
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
         visibility: visible;
         opacity: 1;
+        -webkit-transition: none;
+        -o-transition: none;
         transition: none;
     }
 
@@ -109,7 +129,9 @@
     }
 
     #info-about-practice {
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 
     .r-about-exam {
@@ -121,6 +143,7 @@
     .r-about-exam img {
         width: 100% !important;
         height: auto !important;
+        padding: 0px 20px;
     }
 
     .cnt-about-exam {
@@ -129,7 +152,8 @@
     }
 
     .cnt-about-exam ul {
-        padding-inline-start: 0px !important;
+        -webkit-padding-start: 0px !important;
+                padding-inline-start: 0px !important;
     }
 
     .exam-practice-cnt-header p {
@@ -142,9 +166,23 @@
         max-width: 60px !important;
         height: 60px !important;
         padding: 0px !important;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    #one-question-wrapper .descritpion {
+        margin-bottom: 10px;
+    }
+    
+    .quantity {
+        margin-top: 10px;
     }
 }
 
@@ -175,12 +213,32 @@
     }
 
     .header-choose-year {
-        padding: 12px 20px !important;
+        padding: 12px 18px !important;
+    }
+
+    #header-exam-practice {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     .exam-practice-cnt-header {
-        flex-direction: column !important;
-        align-items: baseline !important;
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+            -ms-flex-direction: column !important;
+                flex-direction: column !important;
+        -webkit-box-align: baseline !important;
+            -ms-flex-align: baseline !important;
+                align-items: baseline !important;
+    }
+
+    #header-exam-practice-cnt {
+        overflow: auto;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
     }
 }
 
@@ -219,24 +277,16 @@
         padding-right: 15px;
     }
 
-    .header-choose-year {
-        padding: 12px 18px !important;
-    }
-
-    #header-exam-practice {
-        display: flex;
-        justify-content: space-between;
-    }
-
     .img-wrapper-exam a {
         max-width: 100% !important;
     }
 }
 
-@media (max-width: 533px) {
-    #header-exam-practice-cnt, .cnt-exam-semestr {
-        overflow: scroll;
-        flex-wrap: nowrap;
+@media (max-width: 550px) {
+    .cnt-exam-semestr {
+        overflow: auto;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
     }
 
     .cnt-exam-practice {
@@ -264,7 +314,10 @@
     }
 
     .cnt-about-practice ul li {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .cnt-about-practice .number-list-practice {
@@ -281,19 +334,30 @@
         width: 100% !important;
     }
 
-    .cnt-exam-choose-semestr-download:first-child {
+    .cnt-exam-choose-semestr-download {
         margin-bottom: 15px;
     }
 
+    .cnt-exam-choose-semestr-download:last-child {
+        margin-bottom: 0px;
+    }
+
     .exam-practice-cnt-header-download {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         width: 100%;
     }
     
     .exam-practice-cnt-header p {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         margin-bottom: 10px !important;
     }
 }
@@ -349,7 +413,9 @@
 @media (max-width: 330px) {
     #main-button-nav {
         width: 100%;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     .button-main-teoria {
@@ -364,11 +430,5 @@
 
     .cnt-about-exam ul li p{
         font-size: 14px !important;
-    }
-}
-
-@media (max-height: 900px) {
-    #main-cnt-info {
-        margin-top: 0px !important;
     }
 }

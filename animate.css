@@ -1,4 +1,3 @@
-/*Animate animation-status-top */
 @-webkit-keyframes spinner-backwards {
     0% {
         -webkit-transform: rotate(0deg);
@@ -19,6 +18,22 @@
     100% {
         -webkit-transform: rotate(-360deg);
                 transform: rotate(-360deg);
+    }
+}
+@-webkit-keyframes move {
+    0% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+
+    50% {
+        -webkit-transform: translateY(15px);
+                transform: translateY(15px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
     }
 }
 @keyframes move {
@@ -63,33 +78,6 @@
 }
 
 /*Animate bug button*/
-@keyframes bug {
-    0% {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-    }
-
-    40% {
-        -webkit-transform: rotate(110deg);
-                transform: rotate(110deg);
-    }
-
-    55% {
-        -webkit-transform: rotate(70deg);
-                transform: rotate(70deg);
-    }
-
-    70% {
-        -webkit-transform: rotate(90deg);
-                transform: rotate(90deg);
-    }
-
-    100% {
-        -webkit-transform: translateY(100vh) rotate(90deg);
-                transform: translateY(100vh) rotate(90deg);
-    }
-}
-
 @-webkit-keyframes hinge {
     0% {
         -webkit-animation-timing-function: ease-in-out;

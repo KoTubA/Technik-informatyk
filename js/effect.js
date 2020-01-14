@@ -137,6 +137,9 @@ $(document).ready(function () {
     }
 
     })
+
+    $('#description-footer-copyright p').html('COPY RIGHT '+new Date().getFullYear()+' © RIGHTS RESERVED');
+    $('#preloader-cnt').fadeOut();
 });
 
 

@@ -148,6 +148,6 @@ END;
         }
     }
     else {
-        header('Location: result.php');
+        header('Location: e14-test-40-pytan-odpowiedzi');
     }
 ?>

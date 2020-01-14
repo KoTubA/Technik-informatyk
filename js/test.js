@@ -28,7 +28,16 @@ function loadanswer(idp, odp)
     });
 }
 
-loadquestion(1,0);
+
+function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b ? b.pop() : '';
+}
+
+let v = "";
+
+if(v=getCookieValue('question')) loadquestion(v,0);
+else loadquestion(1,0);
 
 $('#search').on('click', function() {
     let v = $('#number').val();

@@ -31,6 +31,7 @@
                 
                 if($value<1) $value = $count;
                 else if ($value>$count) $value = 1;
+                setcookie('question', $value, time() + (10 * 365 * 24 * 60 * 60));
 
                 $sql = "SELECT * FROM e12 WHERE id=$value";
                 if($result = @$conn->query($sql)) {
@@ -40,8 +41,8 @@
                         $row = $result->fetch_assoc();
 
 echo <<< END
-            <script>$("#next").one("click", function () { loadquestion($row[id],1); $("#prev").unbind()}); $("#prev").one("click", function () { loadquestion($row[id],-1); $("#next").unbind()});</script>
-            <h3 class="onequestion">To jest pytanie, które w bazie E.13 ma numer: $row[id]</h3>
+            <script>$("#next").on("click", function () { loadquestion($row[id],1); $("#next").unbind(); $("#prev").unbind();}); $("#prev").on("click", function () { loadquestion($row[id],-1); $("#next").unbind(); $("#prev").unbind();});</script>
+            <h3 class="onequestion">To jest pytanie, które w bazie E.12 ma numer: $row[id]</h3>
             <div class="question question-margin">
                 <div class="title">$row[pytanie]</div>
                 <div class="ans" id="odpa">
@@ -56,7 +57,7 @@ echo <<< END
                 <div class="ans" id="odpd">
                     <strong>D. </strong>$row[d]
                 </div>
-                <script>document.getElementById("odpa").addEventListener("click", function() { loadanswer($row[id],'a') }); document.getElementById("odpb").addEventListener("click", function() { loadanswer($row[id],'b') }); document.getElementById("odpc").addEventListener("click", function() { loadanswer($row[id],'c') }); document.getElementById("odpd").addEventListener("click", function() { loadanswer($row[id],'d') });</script>
+                <script>document.getElementById("odpa").addEventListener("click", function() { loadanswer($row[id],'a'); $("#next").unbind(); $("#prev").unbind(); }); document.getElementById("odpb").addEventListener("click", function() { loadanswer($row[id],'b'); $("#next").unbind(); $("#prev").unbind(); }); document.getElementById("odpc").addEventListener("click", function() { loadanswer($row[id],'c'); $("#next").unbind(); $("#prev").unbind(); }); document.getElementById("odpd").addEventListener("click", function() { loadanswer($row[id],'d'); $("#next").unbind(); $("#prev").unbind(); });</script>
 END;
 
                         if(empty($row['src'])!=1) {

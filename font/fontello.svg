@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg">
-<metadata>Copyright (C) 2019 by original authors @ fontello.com</metadata>
+<metadata>Copyright (C) 2020 by original authors @ fontello.com</metadata>
 <defs>
 <font id="fontello" horiz-adv-x="1000" >
 <font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
@@ -24,7 +24,7 @@
 
 <glyph glyph-name="left-open-mini" unicode="&#xe808;" d="M252 180q26-26 0-48-26-26-48 0l-192 194q-24 24 0 50l192 194q22 26 48 0 26-22 0-48l-156-172z" horiz-adv-x="265" />
 
-<glyph glyph-name="logout" unicode="&#xe809;" d="M357 46q0-2 1-11t0-14-2-14-5-11-12-3h-178q-67 0-114 47t-47 114v392q0 67 47 114t114 47h178q8 0 13-5t5-13q0-2 1-11t0-15-2-13-5-11-12-3h-178q-37 0-63-26t-27-64v-392q0-37 27-63t63-27h174t6 0 7-2 4-3 4-5 1-8z m518 304q0-14-11-25l-303-304q-11-10-25-10t-25 10-11 25v161h-250q-14 0-25 11t-11 25v214q0 15 11 25t25 11h250v161q0 14 11 25t25 10 25-10l303-304q11-10 11-25z" horiz-adv-x="928.6" />
+<glyph glyph-name="cancel" unicode="&#xe809;" d="M724 112q0-22-15-38l-76-76q-16-15-38-15t-38 15l-164 165-164-165q-16-15-38-15t-38 15l-76 76q-16 16-16 38t16 38l164 164-164 164q-16 16-16 38t16 38l76 76q16 16 38 16t38-16l164-164 164 164q16 16 38 16t38-16l76-76q15-15 15-38t-15-38l-164-164 164-164q15-15 15-38z" horiz-adv-x="785.7" />
 
 <glyph glyph-name="menu" unicode="&#xf0c9;" d="M857 100v-71q0-15-10-25t-26-11h-785q-15 0-25 11t-11 25v71q0 15 11 25t25 11h785q15 0 26-11t10-25z m0 286v-72q0-14-10-25t-26-10h-785q-15 0-25 10t-11 25v72q0 14 11 25t25 10h785q15 0 26-10t10-25z m0 285v-71q0-14-10-25t-26-11h-785q-15 0-25 11t-11 25v71q0 15 11 26t25 10h785q15 0 26-10t10-26z" horiz-adv-x="857.1" />
 

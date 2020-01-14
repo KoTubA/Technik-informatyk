@@ -80,8 +80,7 @@
                 else $str= "Niestety, poprawna odpowiedź na pytanie $row[id] to $correct";
 
 echo <<< END
-            <script>$("#next").one("click", function () { loadquestion($row[id],1); $("#prev").unbind()}); $("#prev").one("click", function () { loadquestion($row[id],-1); $("#next").unbind()});</script>
-            <script>document.getElementById("next").addEventListener("click", function () { loadquestion($row[id],1)}); document.getElementById("prev").addEventListener("click", function () { loadquestion($row[id],-1)});</script>
+            <script>$("#next").on("click", function () { loadquestion($row[id],1); $("#next").unbind(); $("#prev").unbind();}); $("#prev").on("click", function () { loadquestion($row[id],-1); $("#next").unbind(); $("#prev").unbind();});</script>
             <h3 class="onequestion">$str</h3>
             <div class="question question-margin">
                 <div class="title">$row[pytanie]</div>
