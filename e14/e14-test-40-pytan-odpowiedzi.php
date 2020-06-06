@@ -15,7 +15,7 @@
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="robots" content="index,follow"/>
+    <meta name="robots" content="noindex"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Technik informatyk - Kwalifikacje E.12, E.13, E.14</title>
     <!-- Bootstrap CSS -->
@@ -100,7 +100,7 @@
                 </div>
             </div>
             <div id="description-footer-copyright">
-                <p>COPY RIGHT 2020 © BY SZYMON RIGHTS RESERVED</p>
+                <p>COPY RIGHT 2020 © RIGHTS RESERVED</p>
             </div>
             <div id="scrollup" class="e14">
                 <i class="icon-up-open"></i>

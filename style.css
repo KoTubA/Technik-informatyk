@@ -503,9 +503,7 @@ img {
     top: 0;
     z-index: 99999;
     background-color: #000;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -720,15 +718,7 @@ nav {
     transition: all .3s cubic-bezier(.175,.885,.32,1.275);
 }
 
-.list-about-practice {
-    overflow: hidden;
-}
-
-.list-about-practice a::after {
-    bottom: -2px !important;
-}
-
-.nav-items:hover::after, .list-about-practice a:hover::after {
+.nav-items:hover::after {
     width: 100%;
     height: 2px;
 }
@@ -1135,6 +1125,8 @@ body::-webkit-scrollbar-thumb {
 .r-about-practice .img-practice-wrapper {
     -webkit-animation: move 7s infinite;
             animation: move 7s infinite;
+    padding-right: 20px;
+    padding-top: 25px;
 }
 
 .cnt-exam-practice {
@@ -1278,6 +1270,7 @@ body::-webkit-scrollbar-thumb {
             flex-direction: column;
     padding: 40px 0px;
     width: 100%;
+    display: none;
 }
 
 .exam-practice-cnt-header {
@@ -1594,7 +1587,7 @@ figcaption a h5 {
     margin-top: 1em;
 }
 
-.cnt-about-practice ul li {
+.number-list-practice-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1604,6 +1597,31 @@ figcaption a h5 {
     background: #191c88;
     padding: 30px;
     margin: 25px 0px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.number-list-practice-wrapper:hover {
+    -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+            transform: translateY(-5px);
+}
+
+.number-list-practice-wrapper:hover .e12-circle{
+    background-color: var(--e12);
+}
+
+.number-list-practice-wrapper:hover .e13-circle{
+    background-color: var(--e13);
+}
+
+.number-list-practice-wrapper:hover .e14-circle{
+    background-color: var(--e14);
+}
+
+.cnt-about-practice ul li a {
+    color: #FFF;
 }
 
 .cnt-about-practice .number-list-practice {
@@ -1633,7 +1651,9 @@ figcaption a h5 {
     border-radius: 50%;
     background-color: #3e55ff;
     font-family: 'Poppins', sans-serif;
-
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .cnt-about-practice .list-about-practice h3 {
@@ -1917,6 +1937,10 @@ label {
             justify-content: center;
 }
 
+.btn-large-test {
+    overflow: hidden;
+}
+
 .btn-min {
     font-size: 18px;
     padding: 0px;
@@ -2054,6 +2078,10 @@ input[type=number]
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+}
+
+.quantity-button:hover {
+    background-color: #e1e1e1;
 }
 
 .list-about-exam {

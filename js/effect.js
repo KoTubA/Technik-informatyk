@@ -142,7 +142,7 @@ $(document).ready(function () {
     $('#preloader-cnt').fadeOut();
 });
 
-
+/*
 $(window).on('load', function () {
 
     //---------- Preloader ----------//
@@ -150,3 +150,4 @@ $(window).on('load', function () {
     $('body').addClass('scrollbar-show');
 
 });
+*/

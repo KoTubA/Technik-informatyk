@@ -4,6 +4,12 @@
     }
 }
 
+@media (max-width: 1199px) {
+    .cnt-about-practice .list-about-practice h3 {
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 991px) {
     h1 {
         font-size: 30px;
@@ -184,6 +190,10 @@
     .quantity {
         margin-top: 10px;
     }
+
+    .r-about-practice .img-practice-wrapper  {
+        padding: 0px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -313,7 +323,8 @@
         padding-top: 30px;
     }
 
-    .cnt-about-practice ul li {
+    .number-list-practice-wrapper {
+        margin: 35px 0px;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
@@ -322,10 +333,6 @@
 
     .cnt-about-practice .number-list-practice {
         padding: 0px 0px 15px 0px !important;
-    }
-
-    .cnt-about-practice .list-about-practice h3 {
-        font-size: 19px !important;
     }
 }
 
@@ -365,10 +372,6 @@
 @media (max-width: 420px) {
     html {
         font-size: 0.5rem !important;
-    }
-
-    .cnt-about-practice ul li {
-        padding: 20px !important;
     }
 
     .title-main, #title-autor, #title-question, .title-rest, .title-header {

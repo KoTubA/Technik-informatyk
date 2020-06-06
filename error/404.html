@@ -12,7 +12,7 @@
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="robots" content="index,follow"/>
+    <meta name="robots" content="noindex"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Technik informatyk - Kwalifikacje E.12, E.13, E.14</title>
     <meta name="theme-color" content="#040405"/>
@@ -31,6 +31,11 @@
     <![endif]-->
 </head>
     <body>
+        <style>
+            #preloader {
+                display: flex;
+            }
+        </style>
         <div id="cnt-wrapper-404">
             <div id="preloader">
                 <div id="animation-status-top"></div>
@@ -58,5 +63,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../js/effect.js"></script>
     <script src="../js/bug.js"></script>
+    <script>
+    $(window).on('load', function () {
+        $('#preloader').fadeOut();
+        $('body').addClass('scrollbar-show');
+    });
+    </script>
     </body>
 </html>
