@@ -4,8 +4,8 @@
 
 The project was made to enable people preparing for the `"IT technician"` exam to freely browse the databases of questions and sheets that appeared in previous years.
 
-## Demo
-The project has been made available on free hosting, which can be found at the link: https://egzamin-informatyk.5v.pl/
+## Live demo
+The project has been made available on free hosting, which can be found at the link: [https://egzamin-informatyk.5v.pl/](https://egzamin-informatyk.5v.pl/)
 
 ## Inspiration
 This project was inspired by two projects:
