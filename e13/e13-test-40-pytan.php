@@ -5,18 +5,19 @@
 <html lang="pl">
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149902232-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-149902232-1');
+    gtag('config', 'GA_MEASUREMENT_ID');
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="robots" content="noindex"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Strona przygotwoująca do kwalifikacji zawodowych w zawodzie technik informatyk w oparciu o zmodernizowane podstawy programowe kształcenia.">
     <title>Technik informatyk - Kwalifikacje E.12, E.13, E.14</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -109,15 +110,14 @@
                 </div>
             </div>
         </div>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="../js/effect.js"></script>
     <script src="../js/number.js"></script>
-    <script type="text/javascript">                                  
-        $(document).ready(function() { 
+    <script type="text/javascript">
+        $(document).ready(function() {
             //Timer
             if($('.finish-test').length) {
                 $("#test form").prepend('<div id="time" class="e13"></div>');
@@ -143,7 +143,7 @@
                             sekunda=59;
                             minuta--;
                         }
-                        
+
                         $("#time").html('Do końca egzaminu pozostało: <span>'+('0' + minuta).slice(-2)+'min '+('0' + sekunda).slice(-2)+'sek </span>');
                         $('#sh-side-options-hover').html(('0' + minuta).slice(-2)+':'+('0' + sekunda).slice(-2));
                     }
@@ -165,7 +165,7 @@
                 });
             };
 
-            window.onbeforeunload = function (evt) 
+            window.onbeforeunload = function (evt)
             {
                 if ((typeof evt == 'undefined')) {
                 evt = window.event;
@@ -174,9 +174,9 @@
                     return "Czy opuścić egzamin bez sprawdzenia odpowiedzi? (utracisz aktualny zestaw pytań)";
                 }
                 if ((evt)&&(koniecegzaminu==1)&&(koniecczasu==0)&&(evt=="submit")){
-                    return "Gotowe? Można sprawdzić?";		  
+                    return "Gotowe? Można sprawdzić?";
                 }
-                
+
             }
 
             //---------- Uncheck other checkbox on one checked ----------//

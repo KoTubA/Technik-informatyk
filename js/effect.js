@@ -1,28 +1,28 @@
 $(document).ready(function () {
     const s = $('#scrollup'),
         tab = [$('.button-main-teoria'), $('.button-main-praktyka')],
-        t = [$('.container-wrapper-first'),$('.container-wrapper-sec')],
+        t = [$('.container-wrapper-first'), $('.container-wrapper-sec')],
         list = $('.list-about-exam');
 
     var h = 'bhide';
 
     //---------- Media height nav ----------//
     const media = window.matchMedia("(min-width: 991px)");
-    (media.matches) ? (h = 'bhide',$('.navbar').removeClass('hide')) : (h = 'hide',$('.navbar').removeClass('bhide'),$('#e12-nav, #e13-nav, #e14-nav').addClass('small-nav'),$('.nav-items a').addClass('nav-items-disable'),$('#prev').html('<i class="icon-left-open-mini"></i>'),$('#next').html('<i class="icon-right-open-mini"></i>'));
+    (media.matches) ? (h = 'bhide', $('.navbar').removeClass('hide')) : (h = 'hide', $('.navbar').removeClass('bhide'), $('#e12-nav, #e13-nav, #e14-nav').addClass('small-nav'), $('.nav-items a').addClass('nav-items-disable'), $('#prev').html('<i class="icon-left-open-mini"></i>'), $('#next').html('<i class="icon-right-open-mini"></i>'));
 
     media.addListener(function (media) {
-        (media.matches) ? (h = 'bhide',$('.navbar').removeClass('hide'),$('#e12-nav, #e13-nav, #e14-nav').removeClass('small-nav'),$('.nav-items a').removeClass('nav-items-disable'),check(),$('#prev').html('Jednak wracam!'),$('#next').html('Dawaj następne!')) : (h = 'hide',$('.navbar').removeClass('bhide'),$('#e12-nav, #e13-nav, #e14-nav').addClass('small-nav'),$('.nav-items a').addClass('nav-items-disable'),check(),$('#prev').html('<i class="icon-left-open-mini"></i>'),$('#next').html('<i class="icon-right-open-mini"></i>'));
+        (media.matches) ? (h = 'bhide', $('.navbar').removeClass('hide'), $('#e12-nav, #e13-nav, #e14-nav').removeClass('small-nav'), $('.nav-items a').removeClass('nav-items-disable'), check(), $('#prev').html('Jednak wracam!'), $('#next').html('Dawaj następne!')) : (h = 'hide', $('.navbar').removeClass('bhide'), $('#e12-nav, #e13-nav, #e14-nav').addClass('small-nav'), $('.nav-items a').addClass('nav-items-disable'), check(), $('#prev').html('<i class="icon-left-open-mini"></i>'), $('#next').html('<i class="icon-right-open-mini"></i>'));
     });
 
     //---------- Nav disable element ----------//
     function check() {
-        if($('.small-nav').length) {
+        if ($('.small-nav').length) {
             $('.small-nav .nav-header-subpage').hide();
 
-            $('.small-nav').on('click', function(e) {
+            $('.small-nav').on('click', function (e) {
                 var clickover = $(e.target);
-                if(!clickover.hasClass('nav-items-disable')) {
-                    if(!$(this).find('.nav-header-subpage').is(':hidden')) {
+                if (!clickover.hasClass('nav-items-disable')) {
+                    if (!$(this).find('.nav-header-subpage').is(':hidden')) {
                         $(this).find('.nav-header-subpage').stop().slideUp();
                         $(this).find('.icon-down-open-mini').stop().removeClass('flip');
                         $(this).children().removeClass('active-nav');
@@ -61,9 +61,9 @@ $(document).ready(function () {
     //--------- Info about exam --------//
     $('.cnt-list-about-exam').hide();
 
-    list.each(function(i,ele) {
+    list.each(function (i, ele) {
         $(ele).on('click', function () {
-            if(!$(this).next().is(':hidden')) {
+            if (!$(this).next().is(':hidden')) {
                 $('.cnt-list-about-exam').stop().slideUp();
                 $(this).find('.icon-plus-1').removeClass('hide-ele');
                 $(this).find('.icon-minus').addClass('hide-ele');
@@ -108,14 +108,14 @@ $(document).ready(function () {
     });
 
     var zero = 0;
-    if($('.navbar').length){
-        if($(window).scrollTop()>100) {
+    if ($('.navbar').length) {
+        if ($(window).scrollTop() > 100) {
             $('.navbar').addClass('notransition hide');
-            setTimeout(function(){$('.navbar').removeClass('notransition hide');},0);
+            setTimeout(function () { $('.navbar').removeClass('notransition hide'); }, 0);
         }
-        
+
         $(window).on("scroll", function () {
-            if($(window).scrollTop()>100) {
+            if ($(window).scrollTop() > 100) {
                 $('.navbar').toggleClass(h, $(window).scrollTop() > zero);
                 zero = $(window).scrollTop();
                 var _opened = $(".navbar-collapse").hasClass("show");
@@ -134,20 +134,13 @@ $(document).ready(function () {
             $('.navbar').addClass('menu-bg');
         } else {
             $('.navbar').removeClass('menu-bg');
-    }
+        }
 
     })
 
-    $('#description-footer-copyright p').html('COPY RIGHT '+new Date().getFullYear()+' © RIGHTS RESERVED');
+    $('#description-footer-copyright p').html('COPY RIGHT ' + new Date().getFullYear() + ' © RIGHTS RESERVED');
     $('#preloader-cnt').fadeOut();
 });
 
-/*
-$(window).on('load', function () {
-
-    //---------- Preloader ----------//
-    $('#preloader').fadeOut();
-    $('body').addClass('scrollbar-show');
-
-});
-*/
+//Disable div_pop
+window.open = function (url, windowName, windowFeatures) { };

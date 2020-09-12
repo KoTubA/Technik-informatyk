@@ -740,6 +740,18 @@ nav {
     margin-bottom: 70px;
 }
 
+#container-contact {
+    max-width: 500px;
+}
+
+#container-contact span {
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 5px;
+}
+
 h4 {
     font-size: 24px;
 }
@@ -1044,8 +1056,8 @@ h5 {
     background-color: #070707d1;
 }
 
-/*Remove ad*/
-#ads, #ads_bottom_static, ins, .spolecznoscinet, [name="google_osd_static_frame"], #google_shimpl, #google_esf, #google_vignette, .app_gdpr--SPx19r {
+/*Disable annoying ads*/
+#ads, #ads_bottom_static, ins, .spolecznoscinet, [name="google_osd_static_frame"], #google_shimpl, #google_esf, #google_vignette, .app_gdpr--SPx19r, .display-pop {
     display: none !important;
 }
 
@@ -2209,7 +2221,7 @@ input[type=number]
     position: absolute;
     left: 0;
     bottom: 0;
-    top: 0; 
+    top: 0;
 }
 
 .btn-bug-cnt {
