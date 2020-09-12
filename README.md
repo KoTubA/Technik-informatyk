@@ -10,7 +10,7 @@ The project has been made available on free hosting, which can be found at the l
 ## Inspiration
 This project was inspired by two projects:
 - Front-end design inspired by Mirosław Zelent - [Egzamin infromatyk](https://egzamin-informatyk.pl/)
-- Presentation inspired by [Arkusze++](http://arkuszepp.pl/)
+- Presentation of sheets inspired by [Arkusze++](http://arkuszepp.pl/)
 
 ## Project status
 The project has been completed and will no longer be developed in the future.
